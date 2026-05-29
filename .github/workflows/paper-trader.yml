@@ -1,0 +1,47 @@
+name: Paper Trader
+
+# Draait elke 5 minuten, plus handmatig via Actions tab
+on:
+  schedule:
+    - cron: '*/5 * * * *'
+  workflow_dispatch:
+
+# Maximaal één run tegelijk, geen overlap
+concurrency:
+  group: paper-trader
+  cancel-in-progress: false
+
+# Workflow mag de repo zelf updaten (state file commit)
+permissions:
+  contents: write
+
+jobs:
+  trade:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run paper trader (één cyclus)
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python paper_trader.py --once --skip-validate --no-color
+
+      - name: Commit state als gewijzigd
+        run: |
+          git config user.name "paper-trader-bot"
+          git config user.email "actions@github.com"
+          git add paper_state.json
+          if ! git diff --staged --quiet; then
+            git commit -m "state: $(date -u +%Y-%m-%dT%H:%M:%SZ) [skip ci]"
+            git push
+          else
+            echo "Geen state-wijzigingen, niets om te committen"
+          fi
