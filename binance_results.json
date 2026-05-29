@@ -1,0 +1,766 @@
+{
+  "generated_at": "2026-05-27T20:37:38.119435+00:00",
+  "interval": "1m",
+  "days": 60,
+  "results": {
+    "BTCUSDT": [
+      {
+        "name": "BTCUSDT rolling-50",
+        "metrics": {
+          "total_return_pct": 0.0,
+          "n_trades": 0,
+          "n_opens": 0,
+          "win_rate_pct": 0,
+          "wins": 0,
+          "losses": 0,
+          "profit_factor": 0,
+          "avg_win_pct": 0,
+          "avg_loss_pct": 0,
+          "max_drawdown_pct": 0,
+          "sharpe_per_trade": 0,
+          "total_fees": 0,
+          "final_equity": 10000.0
+        },
+        "trades": []
+      },
+      {
+        "name": "BTCUSDT warmup-\u03c3",
+        "metrics": {
+          "total_return_pct": 0.0,
+          "n_trades": 0,
+          "n_opens": 0,
+          "win_rate_pct": 0,
+          "wins": 0,
+          "losses": 0,
+          "profit_factor": 0,
+          "avg_win_pct": 0,
+          "avg_loss_pct": 0,
+          "max_drawdown_pct": 0,
+          "sharpe_per_trade": 0,
+          "total_fees": 0,
+          "final_equity": 10000.0
+        },
+        "trades": []
+      },
+      {
+        "name": "BTCUSDT expanding-\u03c3",
+        "metrics": {
+          "total_return_pct": 0.0,
+          "n_trades": 0,
+          "n_opens": 0,
+          "win_rate_pct": 0,
+          "wins": 0,
+          "losses": 0,
+          "profit_factor": 0,
+          "avg_win_pct": 0,
+          "avg_loss_pct": 0,
+          "max_drawdown_pct": 0,
+          "sharpe_per_trade": 0,
+          "total_fees": 0,
+          "final_equity": 10000.0
+        },
+        "trades": []
+      }
+    ],
+    "ETHUSDT": [
+      {
+        "name": "ETHUSDT rolling-50",
+        "metrics": {
+          "total_return_pct": -0.007415523529325583,
+          "n_trades": 4,
+          "n_opens": 4,
+          "win_rate_pct": 75.0,
+          "wins": 3,
+          "losses": 1,
+          "profit_factor": 0.7585679900539836,
+          "avg_win_pct": 0.38832042059533,
+          "avg_loss_pct": -1.5357374382526814,
+          "max_drawdown_pct": 0.030714748765058177,
+          "sharpe_per_trade": -0.09624011406237436,
+          "total_fees": 1.60005850615322,
+          "final_equity": 9999.258447647067
+        },
+        "trades": [
+          {
+            "ts": 1779061200000,
+            "datetime": "2026-05-17T23:40:00+00:00",
+            "side": "BUY",
+            "price": 2145.4832825591675,
+            "qty": 0.09312587127767097,
+            "value_usd": 200.0,
+            "fee_usd": 0.2,
+            "pnl_usd": null,
+            "pnl_pct": null,
+            "reason": "Z=-14.76 dip=1.06%"
+          },
+          {
+            "ts": 1779072000000,
+            "datetime": "2026-05-18T02:40:00+00:00",
+            "side": "SELL",
+            "price": 2116.765707206159,
+            "qty": 0.09312587127767097,
+            "value_usd": 196.92852512349464,
+            "fee_usd": 0.1971256507742689,
+            "pnl_usd": -3.0714748765053628,
+            "pnl_pct": -1.5357374382526814,
+            "reason": "time 180"
+          },
+          {
+            "ts": 1779475500000,
+            "datetime": "2026-05-22T18:45:00+00:00",
+            "side": "BUY",
+            "price": 2085.936038316913,
+            "qty": 0.09578433678206806,
+            "value_usd": 200.0,
+            "fee_usd": 0.2,
+            "pnl_usd": null,
+            "pnl_pct": null,
+            "reason": "Z=-22.57 dip=1.05%"
+          },
+          {
+            "ts": 1779475680000,
+            "datetime": "2026-05-22T18:48:00+00:00",
+            "side": "SELL",
+            "price": 2096.883028206942,
+            "qty": 0.09578433678206806,
+            "value_usd": 200.6477016162101,
+            "fee_usd": 0.20084855016637648,
+            "pnl_usd": 0.6477016162100995,
+            "pnl_pct": 0.32385080810504974,
+            "reason": "50% recovery"
+          },
+          {
+            "ts": 1779478200000,
+            "datetime": "2026-05-22T19:30:00+00:00",
+            "side": "BUY",
+            "price": 2062.6345972709296,
+            "qty": 0.09686640584054745,
+            "value_usd": 200.0,
+            "fee_usd": 0.2,
+            "pnl_usd": null,
+            "pnl_pct": null,
+            "reason": "Z=-6.28 dip=1.10%"
+          },
+          {
+            "ts": 1779480420000,
+            "datetime": "2026-05-22T20:07:00+00:00",
+            "side": "SELL",
+            "price": 2075.220951640415,
+            "qty": 0.09686640584054745,
+            "value_usd": 200.81817571549715,
+            "fee_usd": 0.20101919491040757,
+            "pnl_usd": 0.8181757154971478,
+            "pnl_pct": 0.4090878577485739,
+            "reason": "50% recovery"
+          },
+          {
+            "ts": 1779522600000,
+            "datetime": "2026-05-23T07:50:00+00:00",
+            "side": "BUY",
+            "price": 2011.8128011963863,
+            "qty": 0.09931341518514188,
+            "value_usd": 200.0,
+            "fee_usd": 0.2,
+            "pnl_usd": null,
+            "pnl_pct": null,
+            "reason": "Z=-8.82 dip=1.17%"
+          },
+          {
+            "ts": 1779522960000,
+            "datetime": "2026-05-23T07:56:00+00:00",
+            "side": "SELL",
+            "price": 2024.5513652645782,
+            "qty": 0.09931341518514188,
+            "value_usd": 200.86404519186473,
+            "fee_usd": 0.2010651103021669,
+            "pnl_usd": 0.8640451918647329,
+            "pnl_pct": 0.4320225959323664,
+            "reason": "50% recovery"
+          }
+        ]
+      },
+      {
+        "name": "ETHUSDT warmup-\u03c3",
+        "metrics": {
+          "total_return_pct": -0.007415523529325583,
+          "n_trades": 4,
+          "n_opens": 4,
+          "win_rate_pct": 75.0,
+          "wins": 3,
+          "losses": 1,
+          "profit_factor": 0.7585679900539836,
+          "avg_win_pct": 0.38832042059533,
+          "avg_loss_pct": -1.5357374382526814,
+          "max_drawdown_pct": 0.030714748765058177,
+          "sharpe_per_trade": -0.09624011406237436,
+          "total_fees": 1.60005850615322,
+          "final_equity": 9999.258447647067
+        },
+        "trades": [
+          {
+            "ts": 1779061200000,
+            "datetime": "2026-05-17T23:40:00+00:00",
+            "side": "BUY",
+            "price": 2145.4832825591675,
+            "qty": 0.09312587127767097,
+            "value_usd": 200.0,
+            "fee_usd": 0.2,
+            "pnl_usd": null,
+            "pnl_pct": null,
+            "reason": "Z=-15.27 dip=1.06%"
+          },
+          {
+            "ts": 1779072000000,
+            "datetime": "2026-05-18T02:40:00+00:00",
+            "side": "SELL",
+            "price": 2116.765707206159,
+            "qty": 0.09312587127767097,
+            "value_usd": 196.92852512349464,
+            "fee_usd": 0.1971256507742689,
+            "pnl_usd": -3.0714748765053628,
+            "pnl_pct": -1.5357374382526814,
+            "reason": "time 180"
+          },
+          {
+            "ts": 1779475500000,
+            "datetime": "2026-05-22T18:45:00+00:00",
+            "side": "BUY",
+            "price": 2085.936038316913,
+            "qty": 0.09578433678206806,
+            "value_usd": 200.0,
+            "fee_usd": 0.2,
+            "pnl_usd": null,
+            "pnl_pct": null,
+            "reason": "Z=-15.10 dip=1.05%"
+          },
+          {
+            "ts": 1779475680000,
+            "datetime": "2026-05-22T18:48:00+00:00",
+            "side": "SELL",
+            "price": 2096.883028206942,
+            "qty": 0.09578433678206806,
+            "value_usd": 200.6477016162101,
+            "fee_usd": 0.20084855016637648,
+            "pnl_usd": 0.6477016162100995,
+            "pnl_pct": 0.32385080810504974,
+            "reason": "50% recovery"
+          },
+          {
+            "ts": 1779478200000,
+            "datetime": "2026-05-22T19:30:00+00:00",
+            "side": "BUY",
+            "price": 2062.6345972709296,
+            "qty": 0.09686640584054745,
+            "value_usd": 200.0,
+            "fee_usd": 0.2,
+            "pnl_usd": null,
+            "pnl_pct": null,
+            "reason": "Z=-15.80 dip=1.10%"
+          },
+          {
+            "ts": 1779480420000,
+            "datetime": "2026-05-22T20:07:00+00:00",
+            "side": "SELL",
+            "price": 2075.220951640415,
+            "qty": 0.09686640584054745,
+            "value_usd": 200.81817571549715,
+            "fee_usd": 0.20101919491040757,
+            "pnl_usd": 0.8181757154971478,
+            "pnl_pct": 0.4090878577485739,
+            "reason": "50% recovery"
+          },
+          {
+            "ts": 1779522600000,
+            "datetime": "2026-05-23T07:50:00+00:00",
+            "side": "BUY",
+            "price": 2011.8128011963863,
+            "qty": 0.09931341518514188,
+            "value_usd": 200.0,
+            "fee_usd": 0.2,
+            "pnl_usd": null,
+            "pnl_pct": null,
+            "reason": "Z=-16.90 dip=1.17%"
+          },
+          {
+            "ts": 1779522960000,
+            "datetime": "2026-05-23T07:56:00+00:00",
+            "side": "SELL",
+            "price": 2024.5513652645782,
+            "qty": 0.09931341518514188,
+            "value_usd": 200.86404519186473,
+            "fee_usd": 0.2010651103021669,
+            "pnl_usd": 0.8640451918647329,
+            "pnl_pct": 0.4320225959323664,
+            "reason": "50% recovery"
+          }
+        ]
+      },
+      {
+        "name": "ETHUSDT expanding-\u03c3",
+        "metrics": {
+          "total_return_pct": -0.007415523529325583,
+          "n_trades": 4,
+          "n_opens": 4,
+          "win_rate_pct": 75.0,
+          "wins": 3,
+          "losses": 1,
+          "profit_factor": 0.7585679900539836,
+          "avg_win_pct": 0.38832042059533,
+          "avg_loss_pct": -1.5357374382526814,
+          "max_drawdown_pct": 0.030714748765058177,
+          "sharpe_per_trade": -0.09624011406237436,
+          "total_fees": 1.60005850615322,
+          "final_equity": 9999.258447647067
+        },
+        "trades": [
+          {
+            "ts": 1779061200000,
+            "datetime": "2026-05-17T23:40:00+00:00",
+            "side": "BUY",
+            "price": 2145.4832825591675,
+            "qty": 0.09312587127767097,
+            "value_usd": 200.0,
+            "fee_usd": 0.2,
+            "pnl_usd": null,
+            "pnl_pct": null,
+            "reason": "Z=-16.85 dip=1.06%"
+          },
+          {
+            "ts": 1779072000000,
+            "datetime": "2026-05-18T02:40:00+00:00",
+            "side": "SELL",
+            "price": 2116.765707206159,
+            "qty": 0.09312587127767097,
+            "value_usd": 196.92852512349464,
+            "fee_usd": 0.1971256507742689,
+            "pnl_usd": -3.0714748765053628,
+            "pnl_pct": -1.5357374382526814,
+            "reason": "time 180"
+          },
+          {
+            "ts": 1779475500000,
+            "datetime": "2026-05-22T18:45:00+00:00",
+            "side": "BUY",
+            "price": 2085.936038316913,
+            "qty": 0.09578433678206806,
+            "value_usd": 200.0,
+            "fee_usd": 0.2,
+            "pnl_usd": null,
+            "pnl_pct": null,
+            "reason": "Z=-16.53 dip=1.05%"
+          },
+          {
+            "ts": 1779475680000,
+            "datetime": "2026-05-22T18:48:00+00:00",
+            "side": "SELL",
+            "price": 2096.883028206942,
+            "qty": 0.09578433678206806,
+            "value_usd": 200.6477016162101,
+            "fee_usd": 0.20084855016637648,
+            "pnl_usd": 0.6477016162100995,
+            "pnl_pct": 0.32385080810504974,
+            "reason": "50% recovery"
+          },
+          {
+            "ts": 1779478200000,
+            "datetime": "2026-05-22T19:30:00+00:00",
+            "side": "BUY",
+            "price": 2062.6345972709296,
+            "qty": 0.09686640584054745,
+            "value_usd": 200.0,
+            "fee_usd": 0.2,
+            "pnl_usd": null,
+            "pnl_pct": null,
+            "reason": "Z=-17.26 dip=1.10%"
+          },
+          {
+            "ts": 1779480420000,
+            "datetime": "2026-05-22T20:07:00+00:00",
+            "side": "SELL",
+            "price": 2075.220951640415,
+            "qty": 0.09686640584054745,
+            "value_usd": 200.81817571549715,
+            "fee_usd": 0.20101919491040757,
+            "pnl_usd": 0.8181757154971478,
+            "pnl_pct": 0.4090878577485739,
+            "reason": "50% recovery"
+          },
+          {
+            "ts": 1779522600000,
+            "datetime": "2026-05-23T07:50:00+00:00",
+            "side": "BUY",
+            "price": 2011.8128011963863,
+            "qty": 0.09931341518514188,
+            "value_usd": 200.0,
+            "fee_usd": 0.2,
+            "pnl_usd": null,
+            "pnl_pct": null,
+            "reason": "Z=-18.43 dip=1.17%"
+          },
+          {
+            "ts": 1779522960000,
+            "datetime": "2026-05-23T07:56:00+00:00",
+            "side": "SELL",
+            "price": 2024.5513652645782,
+            "qty": 0.09931341518514188,
+            "value_usd": 200.86404519186473,
+            "fee_usd": 0.2010651103021669,
+            "pnl_usd": 0.8640451918647329,
+            "pnl_pct": 0.4320225959323664,
+            "reason": "50% recovery"
+          }
+        ]
+      }
+    ],
+    "SOLUSDT": [
+      {
+        "name": "SOLUSDT rolling-50",
+        "metrics": {
+          "total_return_pct": -0.0052918385851626224,
+          "n_trades": 4,
+          "n_opens": 4,
+          "win_rate_pct": 50.0,
+          "wins": 2,
+          "losses": 2,
+          "profit_factor": 0.8077135648110649,
+          "avg_win_pct": 0.5557191025769086,
+          "avg_loss_pct": -0.6880150672062797,
+          "max_drawdown_pct": 0.021036401209543414,
+          "sharpe_per_trade": -0.0841046726700767,
+          "total_fees": 1.6002710872287114,
+          "final_equity": 9999.470816141484
+        },
+        "trades": [
+          {
+            "ts": 1778923020000,
+            "datetime": "2026-05-16T09:17:00+00:00",
+            "side": "BUY",
+            "price": 86.11095404391452,
+            "qty": 2.320262296688837,
+            "value_usd": 200.0,
+            "fee_usd": 0.2,
+            "pnl_usd": null,
+            "pnl_pct": null,
+            "reason": "Z=-27.27 dip=1.19%"
+          },
+          {
+            "ts": 1778933820000,
+            "datetime": "2026-05-16T12:17:00+00:00",
+            "side": "SELL",
+            "price": 86.00383796182041,
+            "qty": 2.320262296688837,
+            "value_usd": 199.35191113075467,
+            "fee_usd": 0.19955146259334802,
+            "pnl_usd": -0.6480888692453277,
+            "pnl_pct": -0.32404443462266386,
+            "reason": "time 180"
+          },
+          {
+            "ts": 1779061260000,
+            "datetime": "2026-05-17T23:41:00+00:00",
+            "side": "BUY",
+            "price": 83.81043824046698,
+            "qty": 2.383951261855217,
+            "value_usd": 200.0,
+            "fee_usd": 0.2,
+            "pnl_usd": null,
+            "pnl_pct": null,
+            "reason": "Z=-8.98 dip=1.31%"
+          },
+          {
+            "ts": 1779061320000,
+            "datetime": "2026-05-17T23:42:00+00:00",
+            "side": "SELL",
+            "price": 84.56941782730706,
+            "qty": 2.383951261855217,
+            "value_usd": 201.407760973426,
+            "fee_usd": 0.20160937034376977,
+            "pnl_usd": 1.407760973426008,
+            "pnl_pct": 0.703880486713004,
+            "reason": "50% recovery"
+          },
+          {
+            "ts": 1779475500000,
+            "datetime": "2026-05-22T18:45:00+00:00",
+            "side": "BUY",
+            "price": 84.68099293544306,
+            "qty": 2.3594432832444285,
+            "value_usd": 200.0,
+            "fee_usd": 0.2,
+            "pnl_usd": null,
+            "pnl_pct": null,
+            "reason": "Z=-15.44 dip=1.21%"
+          },
+          {
+            "ts": 1779475680000,
+            "datetime": "2026-05-22T18:48:00+00:00",
+            "side": "SELL",
+            "price": 85.19642451080085,
+            "qty": 2.3594432832444285,
+            "value_usd": 200.81511543688163,
+            "fee_usd": 0.20101613156845008,
+            "pnl_usd": 0.8151154368816265,
+            "pnl_pct": 0.40755771844081323,
+            "reason": "50% recovery"
+          },
+          {
+            "ts": 1779522360000,
+            "datetime": "2026-05-23T07:46:00+00:00",
+            "side": "BUY",
+            "price": 82.95047740574662,
+            "qty": 2.408666064966593,
+            "value_usd": 200.0,
+            "fee_usd": 0.2,
+            "pnl_usd": null,
+            "pnl_pct": null,
+            "reason": "Z=-19.74 dip=1.01%"
+          },
+          {
+            "ts": 1779533160000,
+            "datetime": "2026-05-23T10:46:00+00:00",
+            "side": "SELL",
+            "price": 82.2422525082948,
+            "qty": 2.408666064966593,
+            "value_usd": 197.8960286004202,
+            "fee_usd": 0.19809412272314336,
+            "pnl_usd": -2.103971399579791,
+            "pnl_pct": -1.0519856997898955,
+            "reason": "time 180"
+          }
+        ]
+      },
+      {
+        "name": "SOLUSDT warmup-\u03c3",
+        "metrics": {
+          "total_return_pct": -0.0052918385851626224,
+          "n_trades": 4,
+          "n_opens": 4,
+          "win_rate_pct": 50.0,
+          "wins": 2,
+          "losses": 2,
+          "profit_factor": 0.8077135648110649,
+          "avg_win_pct": 0.5557191025769086,
+          "avg_loss_pct": -0.6880150672062797,
+          "max_drawdown_pct": 0.021036401209543414,
+          "sharpe_per_trade": -0.0841046726700767,
+          "total_fees": 1.6002710872287114,
+          "final_equity": 9999.470816141484
+        },
+        "trades": [
+          {
+            "ts": 1778923020000,
+            "datetime": "2026-05-16T09:17:00+00:00",
+            "side": "BUY",
+            "price": 86.11095404391452,
+            "qty": 2.320262296688837,
+            "value_usd": 200.0,
+            "fee_usd": 0.2,
+            "pnl_usd": null,
+            "pnl_pct": null,
+            "reason": "Z=-16.27 dip=1.19%"
+          },
+          {
+            "ts": 1778933820000,
+            "datetime": "2026-05-16T12:17:00+00:00",
+            "side": "SELL",
+            "price": 86.00383796182041,
+            "qty": 2.320262296688837,
+            "value_usd": 199.35191113075467,
+            "fee_usd": 0.19955146259334802,
+            "pnl_usd": -0.6480888692453277,
+            "pnl_pct": -0.32404443462266386,
+            "reason": "time 180"
+          },
+          {
+            "ts": 1779061260000,
+            "datetime": "2026-05-17T23:41:00+00:00",
+            "side": "BUY",
+            "price": 83.81043824046698,
+            "qty": 2.383951261855217,
+            "value_usd": 200.0,
+            "fee_usd": 0.2,
+            "pnl_usd": null,
+            "pnl_pct": null,
+            "reason": "Z=-17.83 dip=1.31%"
+          },
+          {
+            "ts": 1779061320000,
+            "datetime": "2026-05-17T23:42:00+00:00",
+            "side": "SELL",
+            "price": 84.56941782730706,
+            "qty": 2.383951261855217,
+            "value_usd": 201.407760973426,
+            "fee_usd": 0.20160937034376977,
+            "pnl_usd": 1.407760973426008,
+            "pnl_pct": 0.703880486713004,
+            "reason": "50% recovery"
+          },
+          {
+            "ts": 1779475500000,
+            "datetime": "2026-05-22T18:45:00+00:00",
+            "side": "BUY",
+            "price": 84.68099293544306,
+            "qty": 2.3594432832444285,
+            "value_usd": 200.0,
+            "fee_usd": 0.2,
+            "pnl_usd": null,
+            "pnl_pct": null,
+            "reason": "Z=-16.54 dip=1.21%"
+          },
+          {
+            "ts": 1779475680000,
+            "datetime": "2026-05-22T18:48:00+00:00",
+            "side": "SELL",
+            "price": 85.19642451080085,
+            "qty": 2.3594432832444285,
+            "value_usd": 200.81511543688163,
+            "fee_usd": 0.20101613156845008,
+            "pnl_usd": 0.8151154368816265,
+            "pnl_pct": 0.40755771844081323,
+            "reason": "50% recovery"
+          },
+          {
+            "ts": 1779522360000,
+            "datetime": "2026-05-23T07:46:00+00:00",
+            "side": "BUY",
+            "price": 82.95047740574662,
+            "qty": 2.408666064966593,
+            "value_usd": 200.0,
+            "fee_usd": 0.2,
+            "pnl_usd": null,
+            "pnl_pct": null,
+            "reason": "Z=-13.81 dip=1.01%"
+          },
+          {
+            "ts": 1779533160000,
+            "datetime": "2026-05-23T10:46:00+00:00",
+            "side": "SELL",
+            "price": 82.2422525082948,
+            "qty": 2.408666064966593,
+            "value_usd": 197.8960286004202,
+            "fee_usd": 0.19809412272314336,
+            "pnl_usd": -2.103971399579791,
+            "pnl_pct": -1.0519856997898955,
+            "reason": "time 180"
+          }
+        ]
+      },
+      {
+        "name": "SOLUSDT expanding-\u03c3",
+        "metrics": {
+          "total_return_pct": -0.0052918385851626224,
+          "n_trades": 4,
+          "n_opens": 4,
+          "win_rate_pct": 50.0,
+          "wins": 2,
+          "losses": 2,
+          "profit_factor": 0.8077135648110649,
+          "avg_win_pct": 0.5557191025769086,
+          "avg_loss_pct": -0.6880150672062797,
+          "max_drawdown_pct": 0.021036401209543414,
+          "sharpe_per_trade": -0.0841046726700767,
+          "total_fees": 1.6002710872287114,
+          "final_equity": 9999.470816141484
+        },
+        "trades": [
+          {
+            "ts": 1778923020000,
+            "datetime": "2026-05-16T09:17:00+00:00",
+            "side": "BUY",
+            "price": 86.11095404391452,
+            "qty": 2.320262296688837,
+            "value_usd": 200.0,
+            "fee_usd": 0.2,
+            "pnl_usd": null,
+            "pnl_pct": null,
+            "reason": "Z=-17.21 dip=1.19%"
+          },
+          {
+            "ts": 1778933820000,
+            "datetime": "2026-05-16T12:17:00+00:00",
+            "side": "SELL",
+            "price": 86.00383796182041,
+            "qty": 2.320262296688837,
+            "value_usd": 199.35191113075467,
+            "fee_usd": 0.19955146259334802,
+            "pnl_usd": -0.6480888692453277,
+            "pnl_pct": -0.32404443462266386,
+            "reason": "time 180"
+          },
+          {
+            "ts": 1779061260000,
+            "datetime": "2026-05-17T23:41:00+00:00",
+            "side": "BUY",
+            "price": 83.81043824046698,
+            "qty": 2.383951261855217,
+            "value_usd": 200.0,
+            "fee_usd": 0.2,
+            "pnl_usd": null,
+            "pnl_pct": null,
+            "reason": "Z=-18.96 dip=1.31%"
+          },
+          {
+            "ts": 1779061320000,
+            "datetime": "2026-05-17T23:42:00+00:00",
+            "side": "SELL",
+            "price": 84.56941782730706,
+            "qty": 2.383951261855217,
+            "value_usd": 201.407760973426,
+            "fee_usd": 0.20160937034376977,
+            "pnl_usd": 1.407760973426008,
+            "pnl_pct": 0.703880486713004,
+            "reason": "50% recovery"
+          },
+          {
+            "ts": 1779475500000,
+            "datetime": "2026-05-22T18:45:00+00:00",
+            "side": "BUY",
+            "price": 84.68099293544306,
+            "qty": 2.3594432832444285,
+            "value_usd": 200.0,
+            "fee_usd": 0.2,
+            "pnl_usd": null,
+            "pnl_pct": null,
+            "reason": "Z=-17.51 dip=1.21%"
+          },
+          {
+            "ts": 1779475680000,
+            "datetime": "2026-05-22T18:48:00+00:00",
+            "side": "SELL",
+            "price": 85.19642451080085,
+            "qty": 2.3594432832444285,
+            "value_usd": 200.81511543688163,
+            "fee_usd": 0.20101613156845008,
+            "pnl_usd": 0.8151154368816265,
+            "pnl_pct": 0.40755771844081323,
+            "reason": "50% recovery"
+          },
+          {
+            "ts": 1779522360000,
+            "datetime": "2026-05-23T07:46:00+00:00",
+            "side": "BUY",
+            "price": 82.95047740574662,
+            "qty": 2.408666064966593,
+            "value_usd": 200.0,
+            "fee_usd": 0.2,
+            "pnl_usd": null,
+            "pnl_pct": null,
+            "reason": "Z=-14.58 dip=1.01%"
+          },
+          {
+            "ts": 1779533160000,
+            "datetime": "2026-05-23T10:46:00+00:00",
+            "side": "SELL",
+            "price": 82.2422525082948,
+            "qty": 2.408666064966593,
+            "value_usd": 197.8960286004202,
+            "fee_usd": 0.19809412272314336,
+            "pnl_usd": -2.103971399579791,
+            "pnl_pct": -1.0519856997898955,
+            "reason": "time 180"
+          }
+        ]
+      }
+    ]
+  }
+}
