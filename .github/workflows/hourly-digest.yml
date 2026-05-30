@@ -1,5 +1,6 @@
 name: Hourly Digest
 
+# Via cron-job.org elk uur (repository_dispatch), plus backup-schedule en handmatig
 on:
   repository_dispatch:
     types: [hourly_digest]
@@ -20,10 +21,10 @@ jobs:
     timeout-minutes: 2
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v5
+        uses: actions/checkout@v4
 
       - name: Setup Python 3.11
-        uses: actions/setup-python@v6
+        uses: actions/setup-python@v5
         with:
           python-version: '3.11'
 
