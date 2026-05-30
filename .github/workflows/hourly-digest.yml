@@ -1,6 +1,8 @@
 name: Hourly Digest
 
 on:
+  repository_dispatch:
+    types: [hourly_digest]
   schedule:
     - cron: '0 * * * *'
   workflow_dispatch:
