@@ -5,7 +5,8 @@ Leest paper_state.json en print een leesbaar overzicht. Verandert NIETS
 aan de state, alleen lezen. Bedoeld als snelle status-check tussendoor.
 
 Gebruik:
-  python paper_summary.py                     # leest paper_state.json
+  python paper_summary.py                     # leest lokale paper_state.json
+  python paper_summary.py --from-github       # downloadt verse state uit jouw repo
   python paper_summary.py --state-file X.json # andere file
   python paper_summary.py --json              # output als JSON
   python paper_summary.py --no-color          # geen ANSI kleuren
@@ -27,8 +28,31 @@ import math
 import os
 import statistics
 import sys
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 from urllib import request as urlrequest, parse as urlparse
+
+
+# Lokale tijdzone voor display (logging blijft UTC in JSON state).
+# Op Linux (GitHub Actions) werkt ZoneInfo direct. Op Windows zonder
+# tzdata package valt hij terug naar fixed CEST/CET offset.
+def _resolve_local_tz():
+    try:
+        from zoneinfo import ZoneInfo
+        return ZoneInfo("Europe/Amsterdam")
+    except Exception:
+        # Fallback: detecteer DST via huidige datum (eind maart tot eind oktober = CEST)
+        now = datetime.now(timezone.utc)
+        if 3 < now.month < 10 or (now.month == 3 and now.day >= 25) or (now.month == 10 and now.day < 25):
+            return timezone(timedelta(hours=2), name="CEST")
+        return timezone(timedelta(hours=1), name="CET")
+
+
+LOCAL_TZ = _resolve_local_tz()
+
+# Default GitHub raw URL voor --from-github (pas aan als repo verhuist)
+DEFAULT_REPO_RAW_URL = (
+    "https://raw.githubusercontent.com/robbiebak007/pulselab-paper-trader/main/paper_state.json"
+)
 
 
 # Backtest-verwachtingen per variant (uit edge_test_*.json resultaten)
@@ -80,7 +104,10 @@ def color_pnl(value: float) -> str:
 
 
 def fmt_ts(ts: int) -> str:
-    return datetime.fromtimestamp(ts).strftime("%Y-%m-%d %H:%M")
+    """Format unix timestamp in lokale tijd (Europe/Amsterdam)."""
+    return datetime.fromtimestamp(ts, tz=timezone.utc).astimezone(LOCAL_TZ).strftime(
+        "%Y-%m-%d %H:%M"
+    )
 
 
 def fmt_duration_h(seconds: float) -> str:
@@ -240,12 +267,12 @@ def print_variant_block(stats: dict) -> None:
 
 
 def print_summary(state: dict) -> None:
-    now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    now = datetime.now(timezone.utc).astimezone(LOCAL_TZ).strftime("%Y-%m-%d %H:%M:%S %Z")
     saved_at = state.get("saved_at", "?")
 
     print(f"{C.BOLD}{'='*70}{C.R}")
     print(f"{C.BOLD}PAPER TRADER SUMMARY{C.R}   {C.DIM}(nu: {now}){C.R}")
-    print(f"{C.DIM}State opgeslagen: {saved_at}{C.R}")
+    print(f"{C.DIM}State opgeslagen: {saved_at} (UTC){C.R}")
     print(f"{C.BOLD}{'='*70}{C.R}\n")
 
     variants_raw = state.get("variants", {})
@@ -321,8 +348,9 @@ def build_telegram_message(state: dict) -> str:
     """
     Compacte HTML-geformatteerde digest voor Telegram. Geen ANSI, geen tabellen.
     """
-    now = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
-    lines = [f"<b>Paper Trader Digest</b>", f"{now}", ""]
+    now_local = datetime.now(timezone.utc).astimezone(LOCAL_TZ)
+    now_str = now_local.strftime("%Y-%m-%d %H:%M %Z")
+    lines = [f"<b>Paper Trader Digest</b>", f"{now_str}", ""]
 
     variants_raw = state.get("variants", {})
     if not variants_raw:
@@ -431,24 +459,54 @@ def main() -> int:
         action="store_true",
         help="Stuur compacte digest naar Telegram (env: TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID)",
     )
+    parser.add_argument(
+        "--from-github",
+        nargs="?",
+        const=DEFAULT_REPO_RAW_URL,
+        metavar="URL",
+        help=(
+            "Download state direct van GitHub raw URL (default: jouw repo). "
+            "Zo hoef je niet eerst handmatig paper_state.json te downloaden."
+        ),
+    )
     args = parser.parse_args()
 
     if args.no_color:
         _strip_colors()
 
-    if not os.path.exists(args.state_file):
-        print(f"{C.RED}State-file niet gevonden: {args.state_file}{C.R}")
-        print(
-            f"{C.DIM}Tip: dit script moet draaien in dezelfde map als paper_state.json{C.R}"
-        )
-        return 1
+    state: dict
+    if args.from_github:
+        url = args.from_github
+        print(f"{C.DIM}Downloading state van {url}{C.R}")
+        try:
+            req = urlrequest.Request(
+                url, headers={"User-Agent": "paper_summary", "Cache-Control": "no-cache"}
+            )
+            with urlrequest.urlopen(req, timeout=15) as resp:
+                state = json.loads(resp.read())
+        except Exception as e:
+            print(f"{C.RED}Download faalde: {e}{C.R}")
+            print(
+                f"{C.DIM}Tip: is de repo public en bestaat paper_state.json al?{C.R}"
+            )
+            return 1
+    else:
+        if not os.path.exists(args.state_file):
+            print(f"{C.RED}State-file niet gevonden: {args.state_file}{C.R}")
+            print(
+                f"{C.DIM}Tip: gebruik --from-github om direct van repo te downloaden,{C.R}"
+            )
+            print(
+                f"{C.DIM}of draai dit script in dezelfde map als paper_state.json{C.R}"
+            )
+            return 1
 
-    try:
-        with open(args.state_file, "r", encoding="utf-8") as f:
-            state = json.load(f)
-    except json.JSONDecodeError as e:
-        print(f"{C.RED}State-file niet leesbaar als JSON: {e}{C.R}")
-        return 1
+        try:
+            with open(args.state_file, "r", encoding="utf-8") as f:
+                state = json.load(f)
+        except json.JSONDecodeError as e:
+            print(f"{C.RED}State-file niet leesbaar als JSON: {e}{C.R}")
+            return 1
 
     if args.json:
         result = {
