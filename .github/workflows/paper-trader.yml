@@ -1,6 +1,6 @@
 name: Paper Trader
 
-# Draait elke 5 minuten, plus handmatig via Actions tab
+# Draait via cron-job.org elke 5 min (repository_dispatch), plus backup-schedule en handmatig
 on:
   repository_dispatch:
     types: [paper_check]
@@ -36,7 +36,7 @@ jobs:
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: python paper_trader.py --once --skip-validate --no-color
 
-       - name: Commit state als gewijzigd
+      - name: Commit state als gewijzigd
         run: |
           git config user.name "paper-trader-bot"
           git config user.email "actions@github.com"
