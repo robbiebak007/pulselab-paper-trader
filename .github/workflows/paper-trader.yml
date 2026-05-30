@@ -2,6 +2,8 @@ name: Paper Trader
 
 # Draait elke 5 minuten, plus handmatig via Actions tab
 on:
+  repository_dispatch:
+    types: [paper_check]
   schedule:
     - cron: '*/5 * * * *'
   workflow_dispatch:
