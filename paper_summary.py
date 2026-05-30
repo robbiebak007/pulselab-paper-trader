@@ -70,6 +70,30 @@ BACKTEST_EXPECTATIONS: dict[str, dict] = {
         "expected_signals_per_day": 0.5,
         "config": "15m Z<-3.5 180min window 100 (baseline)",
     },
+    "stETH_15m_z2.0_60m_w200_scalp": {
+        "label": "stETH/WPLS scalp",
+        "expected_mean_pct": 1.49,
+        "expected_signals_per_day": 2.5,
+        "config": "15m Z<-2.0 60min window 200 (scalper)",
+    },
+    "INC_15m_z3.5_180m_w100": {
+        "label": "INC/WPLS",
+        "expected_mean_pct": 1.15,  # gemiddelde van recent +0.61% en OOS +1.68%
+        "expected_signals_per_day": 0.3,
+        "config": "15m Z<-3.5 180min window 100",
+    },
+    "WETH_5m_z3.0_90m_w100": {
+        "label": "WETH/WPLS",
+        "expected_mean_pct": 0.90,
+        "expected_signals_per_day": 0.9,
+        "config": "5m Z<-3.0 90min window 100",
+    },
+    "MOST_15m_z3.5_120m_w100": {
+        "label": "MOST/WPLS",
+        "expected_mean_pct": 0.74,
+        "expected_signals_per_day": 0.5,
+        "config": "15m Z<-3.5 120min window 100",
+    },
 }
 
 
