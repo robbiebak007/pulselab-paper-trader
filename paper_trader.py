@@ -11,8 +11,12 @@ Doel: vergelijk live data met backtest-verwachting (Fase 2a).
 Variants worden bovenaan dit bestand geconfigureerd. Pas ze aan naar
 smaak. Default zijn de PASS-combos uit edge_test_*.json:
 
-  stETH/WPLS   15m  Z<-3.5  180min  window 200  (V4b winner, +6.34% gross recent)
-  PCOCK/WPLS   15m  Z<-3.5  180min  window 100  (+1.57% recent, +1.41% OOS, robuust)
+  stETH/WPLS         15m  Z<-3.5  180min  window 200  (V4b winner, +6.34% gross)
+  PCOCK/WPLS         15m  Z<-3.5  180min  window 100  (+1.57% recent / +1.41% OOS)
+  stETH/WPLS scalp   15m  Z<-2.0   60min  window 200  (scalper, +1.49%/+1.33%)
+  INC/WPLS           15m  Z<-3.5  180min  window 100  (cross-period +0.61%/+1.68%)
+  WETH/WPLS           5m  Z<-3.0   90min  window 100  (recent +0.90%, hoge frequentie)
+  MOST/WPLS          15m  Z<-3.5  120min  window 100  (recent +0.74%, geen OOS bewijs)
 
 Gebruik:
   python paper_trader.py                       # terminal-only, 60s polling
@@ -73,6 +77,52 @@ VARIANTS: list[dict[str, Any]] = [
         "timeframe": "15m",
         "threshold": -3.5,
         "horizon_min": 180,
+        "window": 100,
+    },
+    {
+        # Scalper-variant: lagere threshold, kortere horizon, meer signalen.
+        # Recent +1.49% gross / OOS +1.33% gross op 15m Z<-2.0 60min w200.
+        # Target netto ~0.5% per trade na geschatte 1% round-trip fees.
+        # ~226 signalen per 90 dagen = 2.5 trades/dag verwacht.
+        "name": "stETH_15m_z2.0_60m_w200_scalp",
+        "label": "stETH/WPLS scalp",
+        "pool": "0x34243b6878cb49530B2B647F38AA26623dab2509",
+        "timeframe": "15m",
+        "threshold": -2.0,
+        "horizon_min": 60,
+        "window": 200,
+    },
+    {
+        # INC/WPLS: cross-period gevalideerd. Recent +0.61% (PASS-WEAK),
+        # OOS +1.68% (PASS) op 15m Z<-3.5 180min. $438K liquiditeit.
+        "name": "INC_15m_z3.5_180m_w100",
+        "label": "INC/WPLS",
+        "pool": "0xf808Bb6265e9Ca27002c0A04562Bf50d4FE37EAA",
+        "timeframe": "15m",
+        "threshold": -3.5,
+        "horizon_min": 180,
+        "window": 100,
+    },
+    {
+        # WETH/WPLS: recent +0.90% gross op 5m Z<-3.0 90min, 82 signalen.
+        # OOS marginaal (1 PASS-combo). $642K liquiditeit, andere asset-klasse.
+        "name": "WETH_5m_z3.0_90m_w100",
+        "label": "WETH/WPLS",
+        "pool": "0x42AbdFDB63f3282033C766E72Cc4810738571609",
+        "timeframe": "5m",
+        "threshold": -3.0,
+        "horizon_min": 90,
+        "window": 100,
+    },
+    {
+        # MOST/WPLS: recent +0.74% op 15m Z<-3.5 120min, 46 signalen.
+        # GEEN OOS bevestiging (rate limit faalde), dus laag conviction.
+        "name": "MOST_15m_z3.5_120m_w100",
+        "label": "MOST/WPLS",
+        "pool": "0x908B5490414518981ce5c473Ff120A6b338feF67",
+        "timeframe": "15m",
+        "threshold": -3.5,
+        "horizon_min": 120,
         "window": 100,
     },
 ]
