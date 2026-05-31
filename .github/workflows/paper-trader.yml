@@ -24,6 +24,9 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
 
       - name: Setup Python 3.11
         uses: actions/setup-python@v5
@@ -36,23 +39,27 @@ jobs:
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: python paper_trader.py --once --skip-validate --no-color
 
-      - name: Commit state als gewijzigd
+      - name: Commit state met always-fresh-from-remote
         run: |
           git config user.name "paper-trader-bot"
           git config user.email "actions@github.com"
-          git add paper_state.json
-          if git diff --staged --quiet; then
-            echo "Geen state-wijzigingen, niets om te committen"
-            exit 0
-          fi
-          git commit -m "state: $(date -u +%Y-%m-%dT%H:%M:%SZ) [skip ci]"
           for i in 1 2 3 4 5; do
-            if git push; then
+            cp paper_state.json /tmp/our_state.json 2>/dev/null || true
+            git fetch origin main
+            git checkout main 2>/dev/null || git checkout -B main
+            git reset --hard origin/main
+            cp /tmp/our_state.json paper_state.json 2>/dev/null || true
+            git add paper_state.json
+            if git diff --staged --quiet; then
+              echo "Geen state-wijzigingen"
+              exit 0
+            fi
+            git commit -m "state: $(date -u +%Y-%m-%dT%H:%M:%SZ) [skip ci]"
+            if git push origin main; then
               echo "Push gelukt op poging $i"
               exit 0
             fi
-            echo "Push poging $i faalde, rebasing en opnieuw..."
-            git pull --rebase origin main || true
+            echo "Push poging $i faalde, fresh fetch en opnieuw..."
             sleep 2
           done
           echo "Push faalde na 5 pogingen"
