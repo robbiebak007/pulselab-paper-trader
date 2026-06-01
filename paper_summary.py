@@ -94,6 +94,36 @@ BACKTEST_EXPECTATIONS: dict[str, dict] = {
         "expected_signals_per_day": 0.5,
         "config": "15m Z<-3.5 120min window 100",
     },
+    "HEX_15m_z3.5_120m_w100": {
+        "label": "HEX/WPLS V1",
+        "expected_mean_pct": 1.04,  # gem van recent +0.85% en OOS +1.23%
+        "expected_signals_per_day": 0.6,
+        "config": "15m Z<-3.5 120min window 100 (cross-period)",
+    },
+    "DAI_WPLS_15m_z3.0_180m_w100": {
+        "label": "DAI/WPLS",
+        "expected_mean_pct": 1.31,  # gem van recent +0.52% en OOS +2.11%
+        "expected_signals_per_day": 0.8,
+        "config": "15m Z<-3.0 180min window 100 (regime-afh)",
+    },
+    "PLSX_15m_z3.5_120m_w100": {
+        "label": "PLSX/WPLS",
+        "expected_mean_pct": 1.23,  # gem van recent +0.77% en OOS +1.70%
+        "expected_signals_per_day": 0.6,
+        "config": "15m Z<-3.5 120min window 100 (cross-period)",
+    },
+    "ATROPA_15m_z3.5_180m_w100": {
+        "label": "ATROPA/DAI",
+        "expected_mean_pct": 1.39,
+        "expected_signals_per_day": 0.65,
+        "config": "15m Z<-3.5 180min window 100 (recent only)",
+    },
+    "CLUTCH_15m_z3.5_180m_w100_test": {
+        "label": "CLUTCH/WPLS (test)",
+        "expected_mean_pct": 0.0,  # bewust 0, geen edge verwacht
+        "expected_signals_per_day": 0.3,
+        "config": "15m Z<-3.5 180min window 100 (CONTROLE)",
+    },
 }
 
 
