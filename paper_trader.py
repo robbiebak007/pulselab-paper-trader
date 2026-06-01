@@ -17,6 +17,11 @@ smaak. Default zijn de PASS-combos uit edge_test_*.json:
   INC/WPLS           15m  Z<-3.5  180min  window 100  (cross-period +0.61%/+1.68%)
   WETH/WPLS           5m  Z<-3.0   90min  window 100  (recent +0.90%, hoge frequentie)
   MOST/WPLS          15m  Z<-3.5  120min  window 100  (recent +0.74%, geen OOS bewijs)
+  HEX/WPLS V1        15m  Z<-3.5  120min  window 100  (cross-period +0.85%/+1.23%)
+  DAI/WPLS           15m  Z<-3.0  180min  window 100  (OOS sterk +2.11%, regime-afh)
+  PLSX/WPLS          15m  Z<-3.5  120min  window 100  (cross-period +0.77%/+1.70%)
+  ATROPA/DAI         15m  Z<-3.5  180min  window 100  (recent +1.39%, geen OOS)
+  CLUTCH/WPLS (test) 15m  Z<-3.5  180min  window 100  (CONTROLE: geen edge verwacht)
 
 Gebruik:
   python paper_trader.py                       # terminal-only, 60s polling
@@ -123,6 +128,64 @@ VARIANTS: list[dict[str, Any]] = [
         "timeframe": "15m",
         "threshold": -3.5,
         "horizon_min": 120,
+        "window": 100,
+    },
+    {
+        # HEX/WPLS V1: cross-period gevalideerd.
+        # Recent +0.85% (5m Z<-3.5 90min) en OOS +1.23% (15m Z<-3.5 120min).
+        # Hier gekozen voor OOS-best combo. $364K liq.
+        "name": "HEX_15m_z3.5_120m_w100",
+        "label": "HEX/WPLS V1",
+        "pool": "0xf1F4ee610b2bAbB05C635F726eF8B0C568c8dc65",
+        "timeframe": "15m",
+        "threshold": -3.5,
+        "horizon_min": 120,
+        "window": 100,
+    },
+    {
+        # DAI/WPLS: sterk OOS (+2.11%), recent matig (+0.52%).
+        # Regime-afhankelijk. $612K liq, hoog volume $402K/dag.
+        "name": "DAI_WPLS_15m_z3.0_180m_w100",
+        "label": "DAI/WPLS",
+        "pool": "0xae8429918fdbf9a5867e3243697637dc56aa76a1",
+        "timeframe": "15m",
+        "threshold": -3.0,
+        "horizon_min": 180,
+        "window": 100,
+    },
+    {
+        # PLSX/WPLS standaard: cross-period gevalideerd.
+        # Recent +0.77% (5m), OOS +1.70% (15m Z<-3.5 120min). $1.5M liq.
+        "name": "PLSX_15m_z3.5_120m_w100",
+        "label": "PLSX/WPLS",
+        "pool": "0x1b45b9148791d3a104184cd5dfe5ce57193a3ee9",
+        "timeframe": "15m",
+        "threshold": -3.5,
+        "horizon_min": 120,
+        "window": 100,
+    },
+    {
+        # ATROPA/DAI: recent +1.39% op 15m Z<-3.5 180min, 59 signalen.
+        # GEEN OOS data, dus geen cross-period bewijs. Massive $20M liq.
+        "name": "ATROPA_15m_z3.5_180m_w100",
+        "label": "ATROPA/DAI",
+        "pool": "0x5ef7aac0de4f2012cb36730da140025b113fada4",
+        "timeframe": "15m",
+        "threshold": -3.5,
+        "horizon_min": 180,
+        "window": 100,
+    },
+    {
+        # CLUTCH/WPLS: CONTROLE-VARIANT, expliciet GEEN edge in backtest.
+        # Liquiditeit slechts $3K = artifact-gevoelig. Bewust toegevoegd
+        # om te toetsen of onze methodologie "geen edge" goed voorspelt.
+        # Verwachting: 0 winstgevende trades over de meetperiode.
+        "name": "CLUTCH_15m_z3.5_180m_w100_test",
+        "label": "CLUTCH/WPLS (test)",
+        "pool": "0x76B2e69e133945fE6a5ac8Cb6473c8257B26D401",
+        "timeframe": "15m",
+        "threshold": -3.5,
+        "horizon_min": 180,
         "window": 100,
     },
 ]
