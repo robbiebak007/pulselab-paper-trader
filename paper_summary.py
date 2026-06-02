@@ -58,17 +58,17 @@ DEFAULT_REPO_RAW_URL = (
 # Backtest-verwachtingen per variant (uit edge_test_*.json resultaten)
 # Wordt gebruikt om live cijfers tegen te vergelijken.
 BACKTEST_EXPECTATIONS: dict[str, dict] = {
-    "stETH_15m_z3.5_300m_w200": {
+    "stETH_15m_z3.5_180m_w200": {
         "label": "stETH/WPLS",
-        "expected_mean_pct": 6.38,  # recent +6.38%, OOS +13.87% peak
+        "expected_mean_pct": 6.38,  # 300min hold, naam is legacy
         "expected_signals_per_day": 0.65,
-        "config": "15m Z<-3.5 300min window 200 (extended)",
+        "config": "15m Z<-3.5 300min window 200 (extended, naam legacy)",
     },
-    "PCOCK_15m_z3.5_240m_w100": {
+    "PCOCK_15m_z3.5_180m_w100": {
         "label": "PCOCK/WPLS",
-        "expected_mean_pct": 1.36,  # gem van recent +1.38% en OOS +1.34%
+        "expected_mean_pct": 1.36,  # 240min hold, naam is legacy
         "expected_signals_per_day": 0.5,
-        "config": "15m Z<-3.5 240min window 100 (extended compromis)",
+        "config": "15m Z<-3.5 240min window 100 (extended, naam legacy)",
     },
     "stETH_15m_z2.0_60m_w200_scalp": {
         "label": "stETH/WPLS scalp",
