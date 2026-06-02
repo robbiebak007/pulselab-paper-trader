@@ -11,8 +11,8 @@ Doel: vergelijk live data met backtest-verwachting (Fase 2a).
 Variants worden bovenaan dit bestand geconfigureerd. Pas ze aan naar
 smaak. Default zijn de PASS-combos uit edge_test_*.json:
 
-  stETH/WPLS         15m  Z<-3.5  180min  window 200  (V4b winner, +6.34% gross)
-  PCOCK/WPLS         15m  Z<-3.5  180min  window 100  (+1.57% recent / +1.41% OOS)
+  stETH/WPLS         15m  Z<-3.5  300min  window 200  (extended, +6.38%/+13.87% peak)
+  PCOCK/WPLS         15m  Z<-3.5  240min  window 100  (extended compromis +1.38%/+1.34%)
   stETH/WPLS scalp   15m  Z<-2.0   60min  window 200  (scalper, +1.49%/+1.33%)
   INC/WPLS           15m  Z<-3.5  180min  window 100  (cross-period +0.61%/+1.68%)
   WETH/WPLS           5m  Z<-3.0   90min  window 100  (recent +0.90%, hoge frequentie)
@@ -61,27 +61,27 @@ from urllib import request as urlrequest, parse as urlparse, error as urlerror
 
 VARIANTS: list[dict[str, Any]] = [
     {
-        # Geoptimaliseerd via OOS train + recent validate (V4b winner):
-        # window 100 -> 200, horizon 60 -> 180. Backtest recent +6.34% gross,
-        # OOS +9.13% gross. Verbetering consistent over meerdere combos.
-        "name": "stETH_15m_z3.5_180m_w200",
+        # V4b + extended hold: window=200, horizon van 180->300min.
+        # Extended-horizon test: recent +6.38% en OOS +13.87% op 300min,
+        # beide periodes PEAK hier. Cross-period validated upgrade.
+        "name": "stETH_15m_z3.5_300m_w200",
         "label": "stETH/WPLS",
         "pool": "0x34243b6878cb49530B2B647F38AA26623dab2509",
         "timeframe": "15m",
         "threshold": -3.5,
-        "horizon_min": 180,
+        "horizon_min": 300,
         "window": 200,
     },
     {
-        # OOS-bevestigde combo: recent +1.57%, OOS +1.41% (verschil 0.16%).
-        # Cross-period consistentie zwaarder gewogen dan +0.27% magnitude
-        # van 5m Z<-4.5 (waar 5m OOS faalde door API-block).
-        "name": "PCOCK_15m_z3.5_180m_w100",
+        # Compromis tussen recent (peak 360min) en OOS (peak 180min).
+        # 240min werkt op beide periodes: recent +1.38% / OOS +1.34%.
+        # Iets meer hold dan 180 zonder OOS-regime te verliezen.
+        "name": "PCOCK_15m_z3.5_240m_w100",
         "label": "PCOCK/WPLS",
         "pool": "0x03250E1f707E9Fb1CD41B8C2696c0e8eab5B42De",
         "timeframe": "15m",
         "threshold": -3.5,
-        "horizon_min": 180,
+        "horizon_min": 240,
         "window": 100,
     },
     {
