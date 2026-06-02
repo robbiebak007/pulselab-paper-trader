@@ -64,7 +64,8 @@ VARIANTS: list[dict[str, Any]] = [
         # V4b + extended hold: window=200, horizon van 180->300min.
         # Extended-horizon test: recent +6.38% en OOS +13.87% op 300min,
         # beide periodes PEAK hier. Cross-period validated upgrade.
-        "name": "stETH_15m_z3.5_300m_w200",
+        # NAAM houdt "180m" voor history-continuiteit, ECHTE config is 300m.
+        "name": "stETH_15m_z3.5_180m_w200",
         "label": "stETH/WPLS",
         "pool": "0x34243b6878cb49530B2B647F38AA26623dab2509",
         "timeframe": "15m",
@@ -75,8 +76,8 @@ VARIANTS: list[dict[str, Any]] = [
     {
         # Compromis tussen recent (peak 360min) en OOS (peak 180min).
         # 240min werkt op beide periodes: recent +1.38% / OOS +1.34%.
-        # Iets meer hold dan 180 zonder OOS-regime te verliezen.
-        "name": "PCOCK_15m_z3.5_240m_w100",
+        # NAAM houdt "180m" voor history-continuiteit, ECHTE config is 240m.
+        "name": "PCOCK_15m_z3.5_180m_w100",
         "label": "PCOCK/WPLS",
         "pool": "0x03250E1f707E9Fb1CD41B8C2696c0e8eab5B42De",
         "timeframe": "15m",
