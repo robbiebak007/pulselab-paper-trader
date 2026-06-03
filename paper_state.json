@@ -1,19 +1,19 @@
 {
   "version": 1,
-  "saved_at": "2026-06-03T09:56:53.085414+00:00",
+  "saved_at": "2026-06-03T10:01:55.144024+00:00",
   "variants": {
     "stETH_15m_z3.5_180m_w200": {
-      "last_signal_ts": 1780479000,
+      "last_signal_ts": 1780479900,
       "open_trade": null,
       "closed_trades": []
     },
     "PCOCK_15m_z3.5_180m_w100": {
-      "last_signal_ts": 1780479000,
+      "last_signal_ts": 1780479900,
       "open_trade": null,
       "closed_trades": []
     },
     "stETH_15m_z2.0_60m_w200_scalp": {
-      "last_signal_ts": 1780479000,
+      "last_signal_ts": 1780479900,
       "open_trade": null,
       "closed_trades": [
         {
@@ -148,7 +148,7 @@
       ]
     },
     "CLUTCH_15m_z3.5_180m_w100_test": {
-      "last_signal_ts": 1780479000,
+      "last_signal_ts": 1780479900,
       "open_trade": null,
       "closed_trades": []
     }
