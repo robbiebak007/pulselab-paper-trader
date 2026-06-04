@@ -489,39 +489,50 @@ def maybe_open_trade(
     state: VariantState,
     candles: list[Candle],
 ) -> OpenTrade | None:
+    """
+    Itereert over ALLE candles tussen last_signal_ts en de huidige latest
+    closed candle. Vuurt op de EERSTE candle met Z < threshold. Voorkomt
+    dat snelle achtereenvolgende dump-events worden overgeslagen wanneer
+    de cron op een non-signaal candle landde tussen twee dump candles in.
+    """
     if state.open_trade is not None:
         return None  # al een trade open, geen pyramiding in v1
 
-    sig_idx = closed_candle_index(candles, variant["timeframe"])
-    if sig_idx is None or sig_idx < variant["window"]:
+    sig_idx_max = closed_candle_index(candles, variant["timeframe"])
+    if sig_idx_max is None or sig_idx_max < variant["window"]:
         return None
 
-    sig_candle = candles[sig_idx]
-    if sig_candle.ts <= state.last_signal_ts:
-        return None  # al gezien
+    # Itereer van oudste niet-gecheckte candle naar nieuwste
+    for i in range(variant["window"], sig_idx_max + 1):
+        candle = candles[i]
+        if candle.ts <= state.last_signal_ts:
+            continue  # al gezien in vorige cyclus
 
-    closes_so_far = [c.c for c in candles[: sig_idx + 1]]
-    z = latest_zscore(closes_so_far, variant["window"])
-    if z is None or z >= variant["threshold"]:
-        state.last_signal_ts = sig_candle.ts  # bijwerken zodat we niet steeds checken
-        return None
+        # Bereken Z-score met data t/m candle i (geen lookahead)
+        closes_so_far = [c.c for c in candles[: i + 1]]
+        z = latest_zscore(closes_so_far, variant["window"])
 
-    # Signaal vuurt
-    entry_ts = sig_candle.ts
-    entry_price = sig_candle.c
-    horizon_min = variant["horizon_min"]
-    planned_exit_ts = entry_ts + horizon_min * 60
+        if z is not None and z < variant["threshold"]:
+            # Signaal vuurt op deze candle
+            entry_ts = candle.ts
+            entry_price = candle.c
+            horizon_min = variant["horizon_min"]
+            planned_exit_ts = entry_ts + horizon_min * 60
 
-    trade = OpenTrade(
-        entry_ts=entry_ts,
-        entry_price=entry_price,
-        planned_exit_ts=planned_exit_ts,
-        z_score=z,
-        horizon_min=horizon_min,
-    )
-    state.open_trade = trade
-    state.last_signal_ts = sig_candle.ts
-    return trade
+            trade = OpenTrade(
+                entry_ts=entry_ts,
+                entry_price=entry_price,
+                planned_exit_ts=planned_exit_ts,
+                z_score=z,
+                horizon_min=horizon_min,
+            )
+            state.open_trade = trade
+            state.last_signal_ts = candle.ts
+            return trade
+
+    # Geen signaal gevonden in alle niet-gecheckte candles
+    state.last_signal_ts = candles[sig_idx_max].ts
+    return None
 
 
 def maybe_close_trade(
