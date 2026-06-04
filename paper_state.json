@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "saved_at": "2026-06-04T03:26:59.150579+00:00",
+  "saved_at": "2026-06-04T03:31:59.874917+00:00",
   "variants": {
     "stETH_15m_z3.5_180m_w200": {
       "last_signal_ts": 1780482600,
@@ -101,7 +101,7 @@
       "closed_trades": []
     },
     "DAI_WPLS_15m_z3.0_180m_w100": {
-      "last_signal_ts": 1780455600,
+      "last_signal_ts": 1780542900,
       "open_trade": null,
       "closed_trades": [
         {
