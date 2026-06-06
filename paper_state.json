@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "saved_at": "2026-06-06T14:11:53.553726+00:00",
+  "saved_at": "2026-06-06T14:16:57.003819+00:00",
   "variants": {
     "stETH_15m_z3.5_180m_w200": {
       "last_signal_ts": 1780752600,
@@ -351,7 +351,7 @@
       ]
     },
     "CLUTCH_15m_z3.5_180m_w100_test": {
-      "last_signal_ts": 1780753500,
+      "last_signal_ts": 1780754400,
       "open_trade": null,
       "closed_trades": [
         {
