@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "saved_at": "2026-06-06T14:41:54.416440+00:00",
+  "saved_at": "2026-06-06T14:46:54.871005+00:00",
   "variants": {
     "stETH_15m_z3.5_180m_w200": {
       "last_signal_ts": 1780752600,
@@ -36,14 +36,8 @@
       "closed_trades": []
     },
     "stETH_15m_z2.0_60m_w200_scalp": {
-      "last_signal_ts": 1780752600,
-      "open_trade": {
-        "entry_ts": 1780752600,
-        "entry_price": 0.00319562588009997,
-        "planned_exit_ts": 1780756200,
-        "z_score": -3.5530167484500126,
-        "horizon_min": 60
-      },
+      "last_signal_ts": 1780756200,
+      "open_trade": null,
       "closed_trades": [
         {
           "entry_ts": 1780188300,
@@ -124,6 +118,16 @@
           "pnl_usd": 0.3696114063802494,
           "hold_minutes": 60,
           "z_score": -2.303407766825052
+        },
+        {
+          "entry_ts": 1780752600,
+          "entry_price": 0.00319562588009997,
+          "exit_ts": 1780756200,
+          "exit_price": 0.00320152407662974,
+          "return_pct": 0.18457093386618986,
+          "pnl_usd": 0.09228546693309493,
+          "hold_minutes": 60,
+          "z_score": -3.5530167484500126
         }
       ]
     },
@@ -351,7 +355,7 @@
       ]
     },
     "CLUTCH_15m_z3.5_180m_w100_test": {
-      "last_signal_ts": 1780754400,
+      "last_signal_ts": 1780756200,
       "open_trade": null,
       "closed_trades": [
         {
