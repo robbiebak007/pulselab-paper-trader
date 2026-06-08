@@ -1,10 +1,16 @@
 {
   "version": 1,
-  "saved_at": "2026-06-08T17:11:56.750949+00:00",
+  "saved_at": "2026-06-08T17:16:58.227449+00:00",
   "variants": {
     "stETH_15m_z3.5_180m_w200": {
-      "last_signal_ts": 1780937100,
-      "open_trade": null,
+      "last_signal_ts": 1780938000,
+      "open_trade": {
+        "entry_ts": 1780938000,
+        "entry_price": 0.00287230107011319,
+        "planned_exit_ts": 1780956000,
+        "z_score": -4.32277051767685,
+        "horizon_min": 300
+      },
       "closed_trades": [
         {
           "entry_ts": 1780618500,
@@ -39,7 +45,7 @@
       ]
     },
     "PCOCK_15m_z3.5_180m_w100": {
-      "last_signal_ts": 1780937100,
+      "last_signal_ts": 1780938000,
       "open_trade": null,
       "closed_trades": [
         {
@@ -65,8 +71,14 @@
       ]
     },
     "stETH_15m_z2.0_60m_w200_scalp": {
-      "last_signal_ts": 1780937100,
-      "open_trade": null,
+      "last_signal_ts": 1780938000,
+      "open_trade": {
+        "entry_ts": 1780938000,
+        "entry_price": 0.00287230107011319,
+        "planned_exit_ts": 1780941600,
+        "z_score": -4.32277051767685,
+        "horizon_min": 60
+      },
       "closed_trades": [
         {
           "entry_ts": 1780188300,
@@ -503,7 +515,7 @@
       ]
     },
     "ATROPA_15m_z3.5_180m_w100": {
-      "last_signal_ts": 1780937100,
+      "last_signal_ts": 1780938000,
       "open_trade": null,
       "closed_trades": [
         {
@@ -539,7 +551,7 @@
       ]
     },
     "CLUTCH_15m_z3.5_180m_w100_test": {
-      "last_signal_ts": 1780937100,
+      "last_signal_ts": 1780938000,
       "open_trade": null,
       "closed_trades": [
         {
