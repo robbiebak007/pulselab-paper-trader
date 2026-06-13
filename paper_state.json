@@ -1,16 +1,10 @@
 {
   "version": 1,
-  "saved_at": "2026-06-13T00:27:01.050486+00:00",
+  "saved_at": "2026-06-13T00:31:57.563887+00:00",
   "variants": {
     "stETH_15m_z3.5_180m_w200": {
-      "last_signal_ts": 1781291700,
-      "open_trade": {
-        "entry_ts": 1781291700,
-        "entry_price": 0.00314467354709438,
-        "planned_exit_ts": 1781309700,
-        "z_score": -4.93587975813104,
-        "horizon_min": 300
-      },
+      "last_signal_ts": 1781309700,
+      "open_trade": null,
       "closed_trades": [
         {
           "entry_ts": 1780618500,
@@ -51,11 +45,21 @@
           "pnl_usd": 7.883467181858374,
           "hold_minutes": 300,
           "z_score": -4.32277051767685
+        },
+        {
+          "entry_ts": 1781291700,
+          "entry_price": 0.00314467354709438,
+          "exit_ts": 1781309700,
+          "exit_price": 0.00306669606116661,
+          "return_pct": -2.479668708372604,
+          "pnl_usd": -1.239834354186302,
+          "hold_minutes": 300,
+          "z_score": -4.93587975813104
         }
       ]
     },
     "PCOCK_15m_z3.5_180m_w100": {
-      "last_signal_ts": 1781308800,
+      "last_signal_ts": 1781309700,
       "open_trade": null,
       "closed_trades": [
         {
@@ -497,7 +501,7 @@
       ]
     },
     "HEX_15m_z3.5_120m_w100": {
-      "last_signal_ts": 1781308800,
+      "last_signal_ts": 1781309700,
       "open_trade": null,
       "closed_trades": [
         {
@@ -563,7 +567,7 @@
       ]
     },
     "DAI_WPLS_15m_z3.0_180m_w100": {
-      "last_signal_ts": 1781308800,
+      "last_signal_ts": 1781309700,
       "open_trade": null,
       "closed_trades": [
         {
@@ -629,7 +633,7 @@
       ]
     },
     "PLSX_15m_z3.5_120m_w100": {
-      "last_signal_ts": 1781308800,
+      "last_signal_ts": 1781309700,
       "open_trade": null,
       "closed_trades": [
         {
@@ -695,7 +699,7 @@
       ]
     },
     "ATROPA_15m_z3.5_180m_w100": {
-      "last_signal_ts": 1781306100,
+      "last_signal_ts": 1781309700,
       "open_trade": null,
       "closed_trades": [
         {
