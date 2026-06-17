@@ -1,9 +1,9 @@
 {
   "version": 1,
-  "saved_at": "2026-06-17T14:11:57.504835+00:00",
+  "saved_at": "2026-06-17T14:16:53.136678+00:00",
   "variants": {
     "stETH_15m_z3.5_180m_w200": {
-      "last_signal_ts": 1781703900,
+      "last_signal_ts": 1781704800,
       "open_trade": null,
       "closed_trades": [
         {
@@ -69,7 +69,7 @@
       ]
     },
     "PCOCK_15m_z3.5_180m_w100": {
-      "last_signal_ts": 1781703900,
+      "last_signal_ts": 1781704800,
       "open_trade": null,
       "closed_trades": [
         {
@@ -95,14 +95,8 @@
       ]
     },
     "stETH_15m_z2.0_60m_w200_scalp": {
-      "last_signal_ts": 1781701200,
-      "open_trade": {
-        "entry_ts": 1781701200,
-        "entry_price": 0.00351365401752862,
-        "planned_exit_ts": 1781704800,
-        "z_score": -2.3638467362886573,
-        "horizon_min": 60
-      },
+      "last_signal_ts": 1781704800,
+      "open_trade": null,
       "closed_trades": [
         {
           "entry_ts": 1780188300,
@@ -333,11 +327,21 @@
           "pnl_usd": -0.25013540757826613,
           "hold_minutes": 75,
           "z_score": -4.123178387875338
+        },
+        {
+          "entry_ts": 1781701200,
+          "entry_price": 0.00351365401752862,
+          "exit_ts": 1781704800,
+          "exit_price": 0.00362120689785421,
+          "return_pct": 3.0609980319359678,
+          "pnl_usd": 1.5304990159679839,
+          "hold_minutes": 60,
+          "z_score": -2.3638467362886573
         }
       ]
     },
     "INC_15m_z3.5_180m_w100": {
-      "last_signal_ts": 1781703900,
+      "last_signal_ts": 1781704800,
       "open_trade": null,
       "closed_trades": [
         {
@@ -393,7 +397,7 @@
       ]
     },
     "WETH_5m_z3.0_90m_w100": {
-      "last_signal_ts": 1781705100,
+      "last_signal_ts": 1781705400,
       "open_trade": null,
       "closed_trades": [
         {
@@ -549,7 +553,7 @@
       ]
     },
     "MOST_15m_z3.5_120m_w100": {
-      "last_signal_ts": 1781703900,
+      "last_signal_ts": 1781704800,
       "open_trade": null,
       "closed_trades": [
         {
@@ -635,7 +639,7 @@
       ]
     },
     "HEX_15m_z3.5_120m_w100": {
-      "last_signal_ts": 1781703900,
+      "last_signal_ts": 1781704800,
       "open_trade": null,
       "closed_trades": [
         {
@@ -793,7 +797,7 @@
       ]
     },
     "PLSX_15m_z3.5_120m_w100": {
-      "last_signal_ts": 1781703900,
+      "last_signal_ts": 1781704800,
       "open_trade": null,
       "closed_trades": [
         {
