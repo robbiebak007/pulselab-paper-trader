@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "saved_at": "2026-06-25T11:26:54.955985+00:00",
+  "saved_at": "2026-06-25T11:31:22.296807+00:00",
   "variants": {
     "stETH_15m_z3.5_180m_w200": {
       "last_signal_ts": 1782379800,
@@ -119,7 +119,7 @@
       ]
     },
     "PCOCK_15m_z3.5_180m_w100": {
-      "last_signal_ts": 1782385200,
+      "last_signal_ts": 1782386100,
       "open_trade": null,
       "closed_trades": [
         {
@@ -551,7 +551,7 @@
       ]
     },
     "INC_15m_z3.5_180m_w100": {
-      "last_signal_ts": 1782385200,
+      "last_signal_ts": 1782386100,
       "open_trade": null,
       "closed_trades": [
         {
@@ -627,7 +627,7 @@
       ]
     },
     "WETH_5m_z3.0_90m_w100": {
-      "last_signal_ts": 1782386400,
+      "last_signal_ts": 1782386700,
       "open_trade": null,
       "closed_trades": [
         {
@@ -949,7 +949,7 @@
       ]
     },
     "HEX_15m_z3.5_120m_w100": {
-      "last_signal_ts": 1782385200,
+      "last_signal_ts": 1782386100,
       "open_trade": null,
       "closed_trades": [
         {
@@ -1035,7 +1035,7 @@
       ]
     },
     "DAI_WPLS_15m_z3.0_180m_w100": {
-      "last_signal_ts": 1782385200,
+      "last_signal_ts": 1782386100,
       "open_trade": null,
       "closed_trades": [
         {
@@ -1201,7 +1201,7 @@
       ]
     },
     "PLSX_15m_z3.5_120m_w100": {
-      "last_signal_ts": 1782385200,
+      "last_signal_ts": 1782386100,
       "open_trade": null,
       "closed_trades": [
         {
