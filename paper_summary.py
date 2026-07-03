@@ -65,22 +65,22 @@ BACKTEST_EXPECTATIONS: dict[str, dict] = {
         "config": "15m Z<-3.5 300min window 200 (extended, naam legacy)",
     },
     "PCOCK_15m_z3.5_180m_w100": {
-        "label": "PCOCK/WPLS",
-        "expected_mean_pct": 1.36,  # 240min hold, naam is legacy
-        "expected_signals_per_day": 0.5,
-        "config": "15m Z<-3.5 240min window 100 (extended, naam legacy)",
+        "label": "PCOCK/WPLS (gedropt)",
+        "expected_mean_pct": 1.36,
+        "expected_signals_per_day": 0.0,
+        "config": "GEDROPT - 0/2 wins op extended hold, history bewaard",
     },
     "stETH_15m_z2.0_60m_w200_scalp": {
-        "label": "stETH/WPLS scalp",
+        "label": "stETH/WPLS scalp (gedropt)",
         "expected_mean_pct": 1.49,
-        "expected_signals_per_day": 2.5,
-        "config": "15m Z<-2.0 60min window 200 (scalper)",
+        "expected_signals_per_day": 0.0,
+        "config": "GEDROPT - +0.61% live = -0.09% na fees, history bewaard",
     },
     "INC_15m_z3.5_180m_w100": {
         "label": "INC/WPLS",
-        "expected_mean_pct": 1.15,  # gemiddelde van recent +0.61% en OOS +1.68%
+        "expected_mean_pct": 1.07,  # extended test 300min recent
         "expected_signals_per_day": 0.3,
-        "config": "15m Z<-3.5 180min window 100",
+        "config": "15m Z<-3.5 300min window 100 (extended, naam legacy)",
     },
     "WETH_5m_z3.0_90m_w100": {
         "label": "WETH/WPLS",
@@ -89,34 +89,34 @@ BACKTEST_EXPECTATIONS: dict[str, dict] = {
         "config": "5m Z<-3.0 90min window 100",
     },
     "MOST_15m_z3.5_120m_w100": {
-        "label": "MOST/WPLS",
+        "label": "MOST/WPLS (gedropt)",
         "expected_mean_pct": 0.74,
-        "expected_signals_per_day": 0.5,
-        "config": "15m Z<-3.5 120min window 100",
+        "expected_signals_per_day": 0.0,
+        "config": "GEDROPT - live tegengesteld aan backtest, history bewaard",
     },
     "HEX_15m_z3.5_120m_w100": {
         "label": "HEX/WPLS V1",
-        "expected_mean_pct": 1.04,  # gem van recent +0.85% en OOS +1.23%
-        "expected_signals_per_day": 0.6,
-        "config": "15m Z<-3.5 120min window 100 (cross-period)",
+        "expected_mean_pct": 1.69,  # extended test 300min recent
+        "expected_signals_per_day": 0.3,
+        "config": "15m Z<-3.5 300min window 100 (extended, naam legacy)",
     },
     "DAI_WPLS_15m_z3.0_180m_w100": {
-        "label": "DAI/WPLS",
-        "expected_mean_pct": 1.31,  # gem van recent +0.52% en OOS +2.11%
-        "expected_signals_per_day": 0.8,
-        "config": "15m Z<-3.0 180min window 100 (regime-afh)",
+        "label": "DAI/WPLS (gedropt)",
+        "expected_mean_pct": 1.31,
+        "expected_signals_per_day": 0.0,
+        "config": "GEDROPT - live underperformance, history bewaard",
     },
     "PLSX_15m_z3.5_120m_w100": {
         "label": "PLSX/WPLS",
-        "expected_mean_pct": 1.23,  # gem van recent +0.77% en OOS +1.70%
-        "expected_signals_per_day": 0.6,
-        "config": "15m Z<-3.5 120min window 100 (cross-period)",
+        "expected_mean_pct": 1.50,  # extended test 300min recent
+        "expected_signals_per_day": 0.3,
+        "config": "15m Z<-3.5 300min window 100 (extended, naam legacy)",
     },
     "ATROPA_15m_z3.5_180m_w100": {
         "label": "ATROPA/DAI",
-        "expected_mean_pct": 1.39,
+        "expected_mean_pct": 1.30,  # extended test 300min recent
         "expected_signals_per_day": 0.65,
-        "config": "15m Z<-3.5 180min window 100 (recent only)",
+        "config": "15m Z<-3.5 300min window 100 (extended, naam legacy)",
     },
     "CLUTCH_15m_z3.5_180m_w100_test": {
         "label": "CLUTCH/WPLS (test)",
