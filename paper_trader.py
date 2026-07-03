@@ -11,17 +11,16 @@ Doel: vergelijk live data met backtest-verwachting (Fase 2a).
 Variants worden bovenaan dit bestand geconfigureerd. Pas ze aan naar
 smaak. Default zijn de PASS-combos uit edge_test_*.json:
 
-  stETH/WPLS         15m  Z<-3.5  300min  window 200  (extended, +6.38%/+13.87% peak)
-  PCOCK/WPLS         15m  Z<-3.5  240min  window 100  (extended compromis +1.38%/+1.34%)
-  stETH/WPLS scalp   15m  Z<-2.0   60min  window 200  (scalper, +1.49%/+1.33%)
-  INC/WPLS           15m  Z<-3.5  180min  window 100  (cross-period +0.61%/+1.68%)
-  WETH/WPLS           5m  Z<-3.0   90min  window 100  (recent +0.90%, hoge frequentie)
-  MOST/WPLS          15m  Z<-3.5  120min  window 100  (recent +0.74%, geen OOS bewijs)
-  HEX/WPLS V1        15m  Z<-3.5  120min  window 100  (cross-period +0.85%/+1.23%)
-  DAI/WPLS           15m  Z<-3.0  180min  window 100  (OOS sterk +2.11%, regime-afh)
-  PLSX/WPLS          15m  Z<-3.5  120min  window 100  (cross-period +0.77%/+1.70%)
-  ATROPA/DAI         15m  Z<-3.5  180min  window 100  (recent +1.39%, geen OOS)
+  stETH/WPLS         15m  Z<-3.5  300min  window 200  (extended-best, +4.70% gross)
+  INC/WPLS           15m  Z<-3.5  300min  window 100  (300 sweet spot, +1.07%)
+  WETH/WPLS           5m  Z<-3.0   90min  window 100  (5m blijft 90min, +0.90%)
+  HEX/WPLS V1        15m  Z<-3.5  300min  window 100  (300 optimum, +1.69%)
+  PLSX/WPLS          15m  Z<-3.5  300min  window 100  (300 optimum, +1.50%)
+  ATROPA/DAI         15m  Z<-3.5  300min  window 100  (live +2.55% bewezen)
   CLUTCH/WPLS (test) 15m  Z<-3.5  180min  window 100  (CONTROLE: geen edge verwacht)
+
+Gedropt (history archiveerd in state): PCOCK, stETH scalp, MOST, DAI/WPLS.
+Reden: live data wees ze uit als onder backtest of zelfs negatief.
 
 Gebruik:
   python paper_trader.py                       # terminal-only, 60s polling
@@ -74,44 +73,21 @@ VARIANTS: list[dict[str, Any]] = [
         "window": 200,
     },
     {
-        # Compromis tussen recent (peak 360min) en OOS (peak 180min).
-        # 240min werkt op beide periodes: recent +1.38% / OOS +1.34%.
-        # NAAM houdt "180m" voor history-continuiteit, ECHTE config is 240m.
-        "name": "PCOCK_15m_z3.5_180m_w100",
-        "label": "PCOCK/WPLS",
-        "pool": "0x03250E1f707E9Fb1CD41B8C2696c0e8eab5B42De",
-        "timeframe": "15m",
-        "threshold": -3.5,
-        "horizon_min": 240,
-        "window": 100,
-    },
-    {
-        # Scalper-variant: lagere threshold, kortere horizon, meer signalen.
-        # Recent +1.49% gross / OOS +1.33% gross op 15m Z<-2.0 60min w200.
-        # Target netto ~0.5% per trade na geschatte 1% round-trip fees.
-        # ~226 signalen per 90 dagen = 2.5 trades/dag verwacht.
-        "name": "stETH_15m_z2.0_60m_w200_scalp",
-        "label": "stETH/WPLS scalp",
-        "pool": "0x34243b6878cb49530B2B647F38AA26623dab2509",
-        "timeframe": "15m",
-        "threshold": -2.0,
-        "horizon_min": 60,
-        "window": 200,
-    },
-    {
-        # INC/WPLS: cross-period gevalideerd. Recent +0.61% (PASS-WEAK),
-        # OOS +1.68% (PASS) op 15m Z<-3.5 180min. $438K liquiditeit.
+        # INC/WPLS: cross-period gevalideerd. Extended-extended test toonde
+        # 300min als optimum (+1.07% vs +0.64% op 180min). Backtest-recent
+        # bewezen, geen OOS validatie op 300 maar 300 was sweet spot bij 5/6
+        # andere pools dus pattern-bevestiging.
         "name": "INC_15m_z3.5_180m_w100",
         "label": "INC/WPLS",
         "pool": "0xf808Bb6265e9Ca27002c0A04562Bf50d4FE37EAA",
         "timeframe": "15m",
         "threshold": -3.5,
-        "horizon_min": 180,
+        "horizon_min": 300,
         "window": 100,
     },
     {
-        # WETH/WPLS: recent +0.90% gross op 5m Z<-3.0 90min, 82 signalen.
-        # OOS marginaal (1 PASS-combo). $642K liquiditeit, andere asset-klasse.
+        # WETH/WPLS: 5m timeframe blijft, 90min hold blijft. Extended hold
+        # geeft GEEN verbetering op WETH (vlak rond 90-180min).
         "name": "WETH_5m_z3.0_90m_w100",
         "label": "WETH/WPLS",
         "pool": "0x42AbdFDB63f3282033C766E72Cc4810738571609",
@@ -121,59 +97,37 @@ VARIANTS: list[dict[str, Any]] = [
         "window": 100,
     },
     {
-        # MOST/WPLS: recent +0.74% op 15m Z<-3.5 120min, 46 signalen.
-        # GEEN OOS bevestiging (rate limit faalde), dus laag conviction.
-        "name": "MOST_15m_z3.5_120m_w100",
-        "label": "MOST/WPLS",
-        "pool": "0x908B5490414518981ce5c473Ff120A6b338feF67",
-        "timeframe": "15m",
-        "threshold": -3.5,
-        "horizon_min": 120,
-        "window": 100,
-    },
-    {
-        # HEX/WPLS V1: cross-period gevalideerd.
-        # Recent +0.85% (5m Z<-3.5 90min) en OOS +1.23% (15m Z<-3.5 120min).
-        # Hier gekozen voor OOS-best combo. $364K liq.
+        # HEX/WPLS V1: extended test bevestigd 300min als optimum
+        # (+1.69% vs +1.30% op 180min). NAAM houdt "120m" voor history.
         "name": "HEX_15m_z3.5_120m_w100",
         "label": "HEX/WPLS V1",
         "pool": "0xf1F4ee610b2bAbB05C635F726eF8B0C568c8dc65",
         "timeframe": "15m",
         "threshold": -3.5,
-        "horizon_min": 120,
+        "horizon_min": 300,
         "window": 100,
     },
     {
-        # DAI/WPLS: sterk OOS (+2.11%), recent matig (+0.52%).
-        # Regime-afhankelijk. $612K liq, hoog volume $402K/dag.
-        "name": "DAI_WPLS_15m_z3.0_180m_w100",
-        "label": "DAI/WPLS",
-        "pool": "0xae8429918fdbf9a5867e3243697637dc56aa76a1",
-        "timeframe": "15m",
-        "threshold": -3.0,
-        "horizon_min": 180,
-        "window": 100,
-    },
-    {
-        # PLSX/WPLS standaard: cross-period gevalideerd.
-        # Recent +0.77% (5m), OOS +1.70% (15m Z<-3.5 120min). $1.5M liq.
+        # PLSX/WPLS: extended test toonde 300min duidelijk optimum (+1.50%
+        # vs +1.13% op 180min). Pattern-bevestiging op 5/6 pools voor 300.
         "name": "PLSX_15m_z3.5_120m_w100",
         "label": "PLSX/WPLS",
         "pool": "0x1b45b9148791d3a104184cd5dfe5ce57193a3ee9",
         "timeframe": "15m",
         "threshold": -3.5,
-        "horizon_min": 120,
+        "horizon_min": 300,
         "window": 100,
     },
     {
-        # ATROPA/DAI: recent +1.39% op 15m Z<-3.5 180min, 59 signalen.
-        # GEEN OOS data, dus geen cross-period bewijs. Massive $20M liq.
+        # ATROPA/DAI: extended test toonde monotone verbetering. 300min
+        # +1.30%, 480min +1.50%. Gekozen voor 300 voor consistentie met
+        # andere variants. Live data wijst al uit dat dit een sterke pool is.
         "name": "ATROPA_15m_z3.5_180m_w100",
         "label": "ATROPA/DAI",
         "pool": "0x5ef7aac0de4f2012cb36730da140025b113fada4",
         "timeframe": "15m",
         "threshold": -3.5,
-        "horizon_min": 180,
+        "horizon_min": 300,
         "window": 100,
     },
     {
@@ -412,16 +366,24 @@ def latest_zscore(closes: list[float], window: int) -> float | None:
 # State persistentie
 # ============================================================
 
+# Globaal cache voor gedropte variants (zodat hun history behouden blijft)
+_ARCHIVED_VARIANTS: dict[str, dict] = {}
+
+
 def load_state(path: str) -> dict[str, VariantState]:
+    global _ARCHIVED_VARIANTS
     if not os.path.exists(path):
+        _ARCHIVED_VARIANTS = {}
         return {v["name"]: VariantState() for v in VARIANTS}
     try:
         with open(path, "r", encoding="utf-8") as f:
             raw = json.load(f)
     except (json.JSONDecodeError, OSError) as e:
         _log(f"{C.YELLOW}State-file corrupt of onleesbaar: {e}. Verse start.{C.R}")
+        _ARCHIVED_VARIANTS = {}
         return {v["name"]: VariantState() for v in VARIANTS}
 
+    active_names = {v["name"] for v in VARIANTS}
     out: dict[str, VariantState] = {}
     for v in VARIANTS:
         d = raw.get("variants", {}).get(v["name"], {})
@@ -434,21 +396,30 @@ def load_state(path: str) -> dict[str, VariantState]:
             open_trade=open_trade,
             closed_trades=closed,
         )
+
+    # Archief: bewaar history van variants die niet meer in VARIANTS staan
+    _ARCHIVED_VARIANTS = {
+        name: data for name, data in raw.get("variants", {}).items()
+        if name not in active_names
+    }
     return out
 
 
 def save_state(path: str, state: dict[str, VariantState]) -> None:
+    variants_payload = {
+        name: {
+            "last_signal_ts": s.last_signal_ts,
+            "open_trade": asdict(s.open_trade) if s.open_trade else None,
+            "closed_trades": [asdict(c) for c in s.closed_trades],
+        }
+        for name, s in state.items()
+    }
+    # Voeg gearchiveerde variants weer toe (behoud history)
+    variants_payload.update(_ARCHIVED_VARIANTS)
     raw = {
         "version": 1,
         "saved_at": datetime.now(timezone.utc).isoformat(),
-        "variants": {
-            name: {
-                "last_signal_ts": s.last_signal_ts,
-                "open_trade": asdict(s.open_trade) if s.open_trade else None,
-                "closed_trades": [asdict(c) for c in s.closed_trades],
-            }
-            for name, s in state.items()
-        },
+        "variants": variants_payload,
     }
     tmp = path + ".tmp"
     with open(tmp, "w", encoding="utf-8") as f:
