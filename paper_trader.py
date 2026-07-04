@@ -146,6 +146,18 @@ VARIANTS: list[dict[str, Any]] = [
         "horizon_min": 180,
         "window": 100,
     },
+    {
+        # SCADA/WPLS: TEST-VARIANT toegevoegd door gebruiker.
+        # Liquiditeit $35K, volume $2.4K/dag = klein pool, artifact-risico.
+        # Geen backtest bewijs, verwacht vergelijkbaar met CLUTCH profiel.
+        "name": "SCADA_15m_z3.5_180m_w100_test",
+        "label": "SCADA/WPLS (test)",
+        "pool": "0x629075c537633132C645a18F265d59e4153CE1C6",
+        "timeframe": "15m",
+        "threshold": -3.5,
+        "horizon_min": 180,
+        "window": 100,
+    },
 ]
 
 POSITION_SIZE_USD = 50.0  # virtueel kapitaal per trade
