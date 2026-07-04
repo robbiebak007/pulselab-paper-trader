@@ -124,6 +124,12 @@ BACKTEST_EXPECTATIONS: dict[str, dict] = {
         "expected_signals_per_day": 0.3,
         "config": "15m Z<-3.5 180min window 100 (CONTROLE)",
     },
+    "SCADA_15m_z3.5_180m_w100_test": {
+        "label": "SCADA/WPLS (test)",
+        "expected_mean_pct": 0.0,  # geen backtest, klein pool
+        "expected_signals_per_day": 0.2,
+        "config": "15m Z<-3.5 180min window 100 (TEST, klein pool)",
+    },
 }
 
 
