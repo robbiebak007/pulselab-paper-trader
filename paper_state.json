@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "saved_at": "2026-07-06T20:11:36.597941+00:00",
+  "saved_at": "2026-07-06T20:15:36.600476+00:00",
   "variants": {
     "stETH_15m_z3.5_180m_w200": {
       "last_signal_ts": 1783365300,
@@ -955,7 +955,7 @@
       ]
     },
     "SCADA_15m_z3.5_180m_w100_test": {
-      "last_signal_ts": 1783366200,
+      "last_signal_ts": 1783368000,
       "open_trade": null,
       "closed_trades": [
         {
