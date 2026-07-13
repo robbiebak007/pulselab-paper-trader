@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "saved_at": "2026-07-13T14:56:35.435756+00:00",
+  "saved_at": "2026-07-13T15:01:30.762369+00:00",
   "variants": {
     "stETH_15m_z3.5_180m_w200": {
       "last_signal_ts": 1783944000,
@@ -226,7 +226,7 @@
       ]
     },
     "INC_15m_z3.5_180m_w100": {
-      "last_signal_ts": 1783953000,
+      "last_signal_ts": 1783953900,
       "open_trade": null,
       "closed_trades": [
         {
@@ -598,7 +598,7 @@
       ]
     },
     "HEX_15m_z3.5_120m_w100": {
-      "last_signal_ts": 1783953000,
+      "last_signal_ts": 1783953900,
       "open_trade": null,
       "closed_trades": [
         {
@@ -724,7 +724,7 @@
       ]
     },
     "PLSX_15m_z3.5_120m_w100": {
-      "last_signal_ts": 1783953000,
+      "last_signal_ts": 1783953900,
       "open_trade": null,
       "closed_trades": [
         {
@@ -860,7 +860,7 @@
       ]
     },
     "ATROPA_15m_z3.5_180m_w100": {
-      "last_signal_ts": 1783953000,
+      "last_signal_ts": 1783953900,
       "open_trade": null,
       "closed_trades": [
         {
