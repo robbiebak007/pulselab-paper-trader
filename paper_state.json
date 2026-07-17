@@ -1,9 +1,9 @@
 {
   "version": 1,
-  "saved_at": "2026-07-17T02:55:36.462373+00:00",
+  "saved_at": "2026-07-17T03:01:36.802363+00:00",
   "variants": {
     "stETH_15m_z3.5_180m_w200": {
-      "last_signal_ts": 1784255400,
+      "last_signal_ts": 1784256300,
       "open_trade": null,
       "closed_trades": [
         {
@@ -229,7 +229,7 @@
       ]
     },
     "INC_15m_z3.5_180m_w100": {
-      "last_signal_ts": 1784255400,
+      "last_signal_ts": 1784256300,
       "open_trade": null,
       "closed_trades": [
         {
@@ -335,15 +335,8 @@
       ]
     },
     "WETH_5m_z3.0_90m_w100": {
-      "last_signal_ts": 1784251500,
-      "open_trade": {
-        "entry_ts": 1784251500,
-        "entry_price": 1843.62734335278,
-        "planned_exit_ts": 1784256900,
-        "z_score": -3.7068864134526978,
-        "horizon_min": 90,
-        "target_pct": 2.0
-      },
+      "last_signal_ts": 1784256900,
+      "open_trade": null,
       "closed_trades": [
         {
           "entry_ts": 1780261800,
@@ -634,11 +627,21 @@
           "pnl_usd": 0.27150271730336684,
           "hold_minutes": 95,
           "z_score": -3.55496166409456
+        },
+        {
+          "entry_ts": 1784251500,
+          "entry_price": 1843.62734335278,
+          "exit_ts": 1784256900,
+          "exit_price": 1857.48998454888,
+          "return_pct": 0.7519220869706723,
+          "pnl_usd": 0.37596104348533615,
+          "hold_minutes": 90,
+          "z_score": -3.7068864134526978
         }
       ]
     },
     "HEX_15m_z3.5_120m_w100": {
-      "last_signal_ts": 1784255400,
+      "last_signal_ts": 1784256300,
       "open_trade": null,
       "closed_trades": [
         {
@@ -774,7 +777,7 @@
       ]
     },
     "PLSX_15m_z3.5_120m_w100": {
-      "last_signal_ts": 1784255400,
+      "last_signal_ts": 1784256300,
       "open_trade": null,
       "closed_trades": [
         {
@@ -920,7 +923,7 @@
       ]
     },
     "ATROPA_15m_z3.5_180m_w100": {
-      "last_signal_ts": 1784255400,
+      "last_signal_ts": 1784256300,
       "open_trade": null,
       "closed_trades": [
         {
