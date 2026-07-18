@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "saved_at": "2026-07-18T19:56:37.957808+00:00",
+  "saved_at": "2026-07-18T20:01:35.552495+00:00",
   "variants": {
     "stETH_15m_z3.5_180m_w200": {
       "last_signal_ts": 1784403000,
@@ -239,7 +239,7 @@
       ]
     },
     "INC_15m_z3.5_180m_w100": {
-      "last_signal_ts": 1784403000,
+      "last_signal_ts": 1784403900,
       "open_trade": null,
       "closed_trades": [
         {
@@ -375,7 +375,7 @@
       ]
     },
     "WETH_5m_z3.0_90m_w100": {
-      "last_signal_ts": 1784404200,
+      "last_signal_ts": 1784404500,
       "open_trade": null,
       "closed_trades": [
         {
@@ -691,15 +691,8 @@
       ]
     },
     "HEX_15m_z3.5_120m_w100": {
-      "last_signal_ts": 1784385900,
-      "open_trade": {
-        "entry_ts": 1784385900,
-        "entry_price": 0.00118075471534168,
-        "planned_exit_ts": 1784403900,
-        "z_score": -4.422996364275186,
-        "horizon_min": 300,
-        "target_pct": 0.0
-      },
+      "last_signal_ts": 1784403900,
+      "open_trade": null,
       "closed_trades": [
         {
           "entry_ts": 1780752600,
@@ -830,12 +823,29 @@
           "pnl_usd": -0.17309804057694472,
           "hold_minutes": 300,
           "z_score": -3.6003884420983803
+        },
+        {
+          "entry_ts": 1784385900,
+          "entry_price": 0.00118075471534168,
+          "exit_ts": 1784403900,
+          "exit_price": 0.00110993259213119,
+          "return_pct": -5.998038567222303,
+          "pnl_usd": -2.9990192836111516,
+          "hold_minutes": 300,
+          "z_score": -4.422996364275186
         }
       ]
     },
     "PLSX_15m_z3.5_120m_w100": {
-      "last_signal_ts": 1784403000,
-      "open_trade": null,
+      "last_signal_ts": 1784403900,
+      "open_trade": {
+        "entry_ts": 1784403900,
+        "entry_price": 5.20436415603414e-06,
+        "planned_exit_ts": 1784421900,
+        "z_score": -3.6589989013032485,
+        "horizon_min": 300,
+        "target_pct": 0.0
+      },
       "closed_trades": [
         {
           "entry_ts": 1780685100,
@@ -980,7 +990,7 @@
       ]
     },
     "ATROPA_15m_z3.5_180m_w100": {
-      "last_signal_ts": 1784400300,
+      "last_signal_ts": 1784403900,
       "open_trade": null,
       "closed_trades": [
         {
@@ -1252,7 +1262,7 @@
       ]
     },
     "SCADA_15m_z3.5_180m_w100_test": {
-      "last_signal_ts": 1784402100,
+      "last_signal_ts": 1784403900,
       "open_trade": null,
       "closed_trades": [
         {
