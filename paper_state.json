@@ -1,17 +1,10 @@
 {
   "version": 1,
-  "saved_at": "2026-07-31T19:41:36.586058+00:00",
+  "saved_at": "2026-07-31T19:46:29.098576+00:00",
   "variants": {
     "stETH_15m_z3.5_180m_w200": {
-      "last_signal_ts": 1785508200,
-      "open_trade": {
-        "entry_ts": 1785508200,
-        "entry_price": 0.00267675803653501,
-        "planned_exit_ts": 1785526200,
-        "z_score": -4.122649274986996,
-        "horizon_min": 300,
-        "target_pct": 0.0
-      },
+      "last_signal_ts": 1785526200,
+      "open_trade": null,
       "closed_trades": [
         {
           "entry_ts": 1780618500,
@@ -282,11 +275,21 @@
           "pnl_usd": -1.6915735808594752,
           "hold_minutes": 300,
           "z_score": -4.76341878849622
+        },
+        {
+          "entry_ts": 1785508200,
+          "entry_price": 0.00267675803653501,
+          "exit_ts": 1785526200,
+          "exit_price": 0.00264654320945831,
+          "return_pct": -1.1287843975547422,
+          "pnl_usd": -0.5643921987773711,
+          "hold_minutes": 300,
+          "z_score": -4.122649274986996
         }
       ]
     },
     "INC_15m_z3.5_180m_w100": {
-      "last_signal_ts": 1785525300,
+      "last_signal_ts": 1785526200,
       "open_trade": null,
       "closed_trades": [
         {
@@ -482,7 +485,7 @@
       ]
     },
     "WETH_5m_z3.0_90m_w100": {
-      "last_signal_ts": 1785526500,
+      "last_signal_ts": 1785526800,
       "open_trade": null,
       "closed_trades": [
         {
@@ -838,7 +841,7 @@
       ]
     },
     "HEX_15m_z3.5_120m_w100": {
-      "last_signal_ts": 1785525300,
+      "last_signal_ts": 1785526200,
       "open_trade": null,
       "closed_trades": [
         {
@@ -1064,7 +1067,7 @@
       ]
     },
     "PLSX_15m_z3.5_120m_w100": {
-      "last_signal_ts": 1785525300,
+      "last_signal_ts": 1785526200,
       "open_trade": null,
       "closed_trades": [
         {
@@ -1280,7 +1283,7 @@
       ]
     },
     "ATROPA_15m_z3.5_180m_w100": {
-      "last_signal_ts": 1785525300,
+      "last_signal_ts": 1785526200,
       "open_trade": null,
       "closed_trades": [
         {
