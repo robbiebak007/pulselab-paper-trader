@@ -1,9 +1,9 @@
 {
   "version": 1,
-  "saved_at": "2026-08-08T17:26:36.268818+00:00",
+  "saved_at": "2026-08-08T17:31:35.019070+00:00",
   "variants": {
     "stETH_15m_z3.5_180m_w200": {
-      "last_signal_ts": 1786208400,
+      "last_signal_ts": 1786209300,
       "open_trade": null,
       "closed_trades": [
         {
@@ -309,8 +309,15 @@
       ]
     },
     "INC_15m_z3.5_180m_w100": {
-      "last_signal_ts": 1786208400,
-      "open_trade": null,
+      "last_signal_ts": 1786209300,
+      "open_trade": {
+        "entry_ts": 1786209300,
+        "entry_price": 0.4564035613511,
+        "planned_exit_ts": 1786227300,
+        "z_score": -4.316507913534198,
+        "horizon_min": 300,
+        "target_pct": 0.0
+      },
       "closed_trades": [
         {
           "entry_ts": 1780668900,
@@ -535,7 +542,7 @@
       ]
     },
     "WETH_5m_z3.0_90m_w100": {
-      "last_signal_ts": 1786209600,
+      "last_signal_ts": 1786209900,
       "open_trade": null,
       "closed_trades": [
         {
@@ -921,8 +928,15 @@
       ]
     },
     "HEX_15m_z3.5_120m_w100": {
-      "last_signal_ts": 1786208400,
-      "open_trade": null,
+      "last_signal_ts": 1786209300,
+      "open_trade": {
+        "entry_ts": 1786209300,
+        "entry_price": 0.00272924041789047,
+        "planned_exit_ts": 1786227300,
+        "z_score": -4.030765823500976,
+        "horizon_min": 300,
+        "target_pct": 0.0
+      },
       "closed_trades": [
         {
           "entry_ts": 1780752600,
@@ -1197,7 +1211,7 @@
       ]
     },
     "PLSX_15m_z3.5_120m_w100": {
-      "last_signal_ts": 1786208400,
+      "last_signal_ts": 1786209300,
       "open_trade": null,
       "closed_trades": [
         {
@@ -1443,7 +1457,7 @@
       ]
     },
     "ATROPA_15m_z3.5_180m_w100": {
-      "last_signal_ts": 1786208400,
+      "last_signal_ts": 1786209300,
       "open_trade": null,
       "closed_trades": [
         {
@@ -1785,8 +1799,15 @@
       ]
     },
     "SCADA_15m_z3.5_180m_w100_test": {
-      "last_signal_ts": 1786201200,
-      "open_trade": null,
+      "last_signal_ts": 1786209300,
+      "open_trade": {
+        "entry_ts": 1786209300,
+        "entry_price": 0.00122783231764949,
+        "planned_exit_ts": 1786220100,
+        "z_score": -4.064634476145628,
+        "horizon_min": 180,
+        "target_pct": 0.0
+      },
       "closed_trades": [
         {
           "entry_ts": 1782906300,
