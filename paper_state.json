@@ -1,17 +1,10 @@
 {
   "version": 1,
-  "saved_at": "2026-08-10T17:11:29.413176+00:00",
+  "saved_at": "2026-08-10T17:16:29.452768+00:00",
   "variants": {
     "stETH_15m_z3.5_180m_w200": {
-      "last_signal_ts": 1786363200,
-      "open_trade": {
-        "entry_ts": 1786363200,
-        "entry_price": 0.002837017806381,
-        "planned_exit_ts": 1786381200,
-        "z_score": -5.605179759942397,
-        "horizon_min": 300,
-        "target_pct": 0.0
-      },
+      "last_signal_ts": 1786381200,
+      "open_trade": null,
       "closed_trades": [
         {
           "entry_ts": 1780618500,
@@ -312,11 +305,21 @@
           "pnl_usd": -1.591563177846194,
           "hold_minutes": 300,
           "z_score": -4.924644921975605
+        },
+        {
+          "entry_ts": 1786363200,
+          "entry_price": 0.002837017806381,
+          "exit_ts": 1786381200,
+          "exit_price": 0.00273180417399865,
+          "return_pct": -3.7085996480425374,
+          "pnl_usd": -1.854299824021269,
+          "hold_minutes": 300,
+          "z_score": -5.605179759942397
         }
       ]
     },
     "INC_15m_z3.5_180m_w100": {
-      "last_signal_ts": 1786380300,
+      "last_signal_ts": 1786381200,
       "open_trade": null,
       "closed_trades": [
         {
@@ -562,7 +565,7 @@
       ]
     },
     "WETH_5m_z3.0_90m_w100": {
-      "last_signal_ts": 1786381500,
+      "last_signal_ts": 1786381800,
       "open_trade": null,
       "closed_trades": [
         {
@@ -948,7 +951,7 @@
       ]
     },
     "HEX_15m_z3.5_120m_w100": {
-      "last_signal_ts": 1786380300,
+      "last_signal_ts": 1786381200,
       "open_trade": null,
       "closed_trades": [
         {
@@ -1254,7 +1257,7 @@
       ]
     },
     "PLSX_15m_z3.5_120m_w100": {
-      "last_signal_ts": 1786380300,
+      "last_signal_ts": 1786381200,
       "open_trade": null,
       "closed_trades": [
         {
@@ -1872,7 +1875,7 @@
       ]
     },
     "SCADA_15m_z3.5_180m_w100_test": {
-      "last_signal_ts": 1786380300,
+      "last_signal_ts": 1786381200,
       "open_trade": null,
       "closed_trades": [
         {
