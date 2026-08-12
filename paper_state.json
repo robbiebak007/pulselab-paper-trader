@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "saved_at": "2026-08-12T15:46:33.709200+00:00",
+  "saved_at": "2026-08-12T15:51:31.774173+00:00",
   "variants": {
     "stETH_15m_z3.5_180m_w200": {
       "last_signal_ts": 1786547700,
@@ -585,15 +585,8 @@
       ]
     },
     "WETH_5m_z3.0_90m_w100": {
-      "last_signal_ts": 1786544100,
-      "open_trade": {
-        "entry_ts": 1786544100,
-        "entry_price": 1864.55536001481,
-        "planned_exit_ts": 1786549500,
-        "z_score": -3.7163644696062215,
-        "horizon_min": 90,
-        "target_pct": 2.0
-      },
+      "last_signal_ts": 1786549500,
+      "open_trade": null,
       "closed_trades": [
         {
           "entry_ts": 1780261800,
@@ -984,6 +977,16 @@
           "pnl_usd": 0.21291677679078963,
           "hold_minutes": 90,
           "z_score": -3.1618795051017945
+        },
+        {
+          "entry_ts": 1786544100,
+          "entry_price": 1864.55536001481,
+          "exit_ts": 1786549500,
+          "exit_price": 1876.07404945237,
+          "return_pct": 0.6177713831713986,
+          "pnl_usd": 0.3088856915856993,
+          "hold_minutes": 90,
+          "z_score": -3.7163644696062215
         }
       ]
     },
