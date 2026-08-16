@@ -1,9 +1,9 @@
 {
   "version": 1,
-  "saved_at": "2026-08-16T05:12:37.671991+00:00",
+  "saved_at": "2026-08-16T05:16:35.128475+00:00",
   "variants": {
     "stETH_15m_z3.5_180m_w200": {
-      "last_signal_ts": 1786855500,
+      "last_signal_ts": 1786856400,
       "open_trade": null,
       "closed_trades": [
         {
@@ -329,8 +329,15 @@
       ]
     },
     "INC_15m_z3.5_180m_w100": {
-      "last_signal_ts": 1786855500,
-      "open_trade": null,
+      "last_signal_ts": 1786856400,
+      "open_trade": {
+        "entry_ts": 1786856400,
+        "entry_price": 0.507536792401252,
+        "planned_exit_ts": 1786874400,
+        "z_score": -4.092430402877339,
+        "horizon_min": 300,
+        "target_pct": 0.0
+      },
       "closed_trades": [
         {
           "entry_ts": 1780668900,
@@ -595,7 +602,7 @@
       ]
     },
     "WETH_5m_z3.0_90m_w100": {
-      "last_signal_ts": 1786856400,
+      "last_signal_ts": 1786857000,
       "open_trade": null,
       "closed_trades": [
         {
@@ -1001,7 +1008,7 @@
       ]
     },
     "HEX_15m_z3.5_120m_w100": {
-      "last_signal_ts": 1786855500,
+      "last_signal_ts": 1786856400,
       "open_trade": null,
       "closed_trades": [
         {
@@ -1337,7 +1344,7 @@
       ]
     },
     "PLSX_15m_z3.5_120m_w100": {
-      "last_signal_ts": 1786855500,
+      "last_signal_ts": 1786856400,
       "open_trade": null,
       "closed_trades": [
         {
@@ -1613,7 +1620,7 @@
       ]
     },
     "ATROPA_15m_z3.5_180m_w100": {
-      "last_signal_ts": 1786855500,
+      "last_signal_ts": 1786856400,
       "open_trade": null,
       "closed_trades": [
         {
