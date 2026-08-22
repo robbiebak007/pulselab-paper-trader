@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "saved_at": "2026-08-22T19:13:19.851397+00:00",
+  "saved_at": "2026-08-22T19:16:31.412202+00:00",
   "variants": {
     "stETH_15m_z3.5_180m_w200": {
       "last_signal_ts": 1787415300,
@@ -366,7 +366,7 @@
       ]
     },
     "INC_15m_z3.5_180m_w100": {
-      "last_signal_ts": 1787424300,
+      "last_signal_ts": 1787425200,
       "open_trade": null,
       "closed_trades": [
         {
@@ -662,7 +662,7 @@
       ]
     },
     "WETH_5m_z3.0_90m_w100": {
-      "last_signal_ts": 1787425500,
+      "last_signal_ts": 1787425800,
       "open_trade": null,
       "closed_trades": [
         {
@@ -1108,7 +1108,7 @@
       ]
     },
     "HEX_15m_z3.5_120m_w100": {
-      "last_signal_ts": 1787424300,
+      "last_signal_ts": 1787425200,
       "open_trade": null,
       "closed_trades": [
         {
@@ -1464,7 +1464,7 @@
       ]
     },
     "PLSX_15m_z3.5_120m_w100": {
-      "last_signal_ts": 1787424300,
+      "last_signal_ts": 1787425200,
       "open_trade": null,
       "closed_trades": [
         {
@@ -2172,15 +2172,8 @@
       ]
     },
     "SCADA_15m_z3.5_180m_w100_test": {
-      "last_signal_ts": 1787414400,
-      "open_trade": {
-        "entry_ts": 1787414400,
-        "entry_price": 0.00113836274758078,
-        "planned_exit_ts": 1787425200,
-        "z_score": -4.437498646924557,
-        "horizon_min": 180,
-        "target_pct": 0.0
-      },
+      "last_signal_ts": 1787425200,
+      "open_trade": null,
       "closed_trades": [
         {
           "entry_ts": 1782906300,
@@ -2451,6 +2444,16 @@
           "pnl_usd": 3.004373224069684,
           "hold_minutes": 195,
           "z_score": -6.897583513042951
+        },
+        {
+          "entry_ts": 1787414400,
+          "entry_price": 0.00113836274758078,
+          "exit_ts": 1787425200,
+          "exit_price": 0.00113236141164369,
+          "return_pct": -0.527190120183038,
+          "pnl_usd": -0.263595060091519,
+          "hold_minutes": 180,
+          "z_score": -4.437498646924557
         }
       ]
     },
