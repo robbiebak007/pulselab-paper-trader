@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "saved_at": "2026-08-30T17:10:41.038939+00:00",
+  "saved_at": "2026-08-30T17:16:37.333209+00:00",
   "variants": {
     "stETH_15m_z3.5_180m_w200": {
       "last_signal_ts": 1788105600,
@@ -722,7 +722,7 @@
       ]
     },
     "WETH_5m_z3.0_90m_w100": {
-      "last_signal_ts": 1788109500,
+      "last_signal_ts": 1788109800,
       "open_trade": null,
       "closed_trades": [
         {
@@ -1591,7 +1591,7 @@
       ]
     },
     "PLSX_15m_z3.5_120m_w100": {
-      "last_signal_ts": 1788108300,
+      "last_signal_ts": 1788109200,
       "open_trade": null,
       "closed_trades": [
         {
@@ -2356,7 +2356,7 @@
       ]
     },
     "SCADA_15m_z3.5_180m_w100_test": {
-      "last_signal_ts": 1788108300,
+      "last_signal_ts": 1788109200,
       "open_trade": null,
       "closed_trades": [
         {
