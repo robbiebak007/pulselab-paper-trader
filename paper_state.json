@@ -1,9 +1,9 @@
 {
   "version": 1,
-  "saved_at": "2026-08-31T06:26:37.576498+00:00",
+  "saved_at": "2026-08-31T06:31:22.469968+00:00",
   "variants": {
     "stETH_15m_z3.5_180m_w200": {
-      "last_signal_ts": 1788156000,
+      "last_signal_ts": 1788156900,
       "open_trade": null,
       "closed_trades": [
         {
@@ -389,7 +389,7 @@
       ]
     },
     "INC_15m_z3.5_180m_w100": {
-      "last_signal_ts": 1788156000,
+      "last_signal_ts": 1788156900,
       "open_trade": null,
       "closed_trades": [
         {
@@ -745,7 +745,7 @@
       ]
     },
     "WETH_5m_z3.0_90m_w100": {
-      "last_signal_ts": 1788157200,
+      "last_signal_ts": 1788157500,
       "open_trade": null,
       "closed_trades": [
         {
@@ -1241,7 +1241,7 @@
       ]
     },
     "HEX_15m_z3.5_120m_w100": {
-      "last_signal_ts": 1788156000,
+      "last_signal_ts": 1788156900,
       "open_trade": null,
       "closed_trades": [
         {
@@ -1627,7 +1627,7 @@
       ]
     },
     "PLSX_15m_z3.5_120m_w100": {
-      "last_signal_ts": 1788156000,
+      "last_signal_ts": 1788156900,
       "open_trade": null,
       "closed_trades": [
         {
@@ -1993,15 +1993,8 @@
       ]
     },
     "ATROPA_15m_z3.5_180m_w100": {
-      "last_signal_ts": 1788138900,
-      "open_trade": {
-        "entry_ts": 1788138900,
-        "entry_price": 0.0476653846520776,
-        "planned_exit_ts": 1788156900,
-        "z_score": -4.796383584260338,
-        "horizon_min": 300,
-        "target_pct": 0.0
-      },
+      "last_signal_ts": 1788156900,
+      "open_trade": null,
       "closed_trades": [
         {
           "entry_ts": 1780362000,
@@ -2382,6 +2375,16 @@
           "pnl_usd": -1.5560716792508649,
           "hold_minutes": 330,
           "z_score": -3.56544640252857
+        },
+        {
+          "entry_ts": 1788138900,
+          "entry_price": 0.0476653846520776,
+          "exit_ts": 1788156900,
+          "exit_price": 0.0444000357815254,
+          "return_pct": -6.850566494714889,
+          "pnl_usd": -3.425283247357444,
+          "hold_minutes": 300,
+          "z_score": -4.796383584260338
         }
       ]
     },
