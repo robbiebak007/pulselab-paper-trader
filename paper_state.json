@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "saved_at": "2026-08-31T14:26:32.123371+00:00",
+  "saved_at": "2026-08-31T14:31:34.952490+00:00",
   "variants": {
     "stETH_15m_z3.5_180m_w200": {
       "last_signal_ts": 1788184800,
@@ -389,7 +389,7 @@
       ]
     },
     "INC_15m_z3.5_180m_w100": {
-      "last_signal_ts": 1788184800,
+      "last_signal_ts": 1788185700,
       "open_trade": null,
       "closed_trades": [
         {
@@ -745,7 +745,7 @@
       ]
     },
     "WETH_5m_z3.0_90m_w100": {
-      "last_signal_ts": 1788186000,
+      "last_signal_ts": 1788186300,
       "open_trade": null,
       "closed_trades": [
         {
@@ -1241,7 +1241,7 @@
       ]
     },
     "HEX_15m_z3.5_120m_w100": {
-      "last_signal_ts": 1788184800,
+      "last_signal_ts": 1788185700,
       "open_trade": null,
       "closed_trades": [
         {
@@ -1627,7 +1627,7 @@
       ]
     },
     "PLSX_15m_z3.5_120m_w100": {
-      "last_signal_ts": 1788184800,
+      "last_signal_ts": 1788185700,
       "open_trade": null,
       "closed_trades": [
         {
@@ -1993,7 +1993,7 @@
       ]
     },
     "ATROPA_15m_z3.5_180m_w100": {
-      "last_signal_ts": 1788183000,
+      "last_signal_ts": 1788185700,
       "open_trade": null,
       "closed_trades": [
         {
@@ -2415,15 +2415,8 @@
       ]
     },
     "SCADA_15m_z3.5_180m_w100_test": {
-      "last_signal_ts": 1788168600,
-      "open_trade": {
-        "entry_ts": 1788168600,
-        "entry_price": 0.000818355832170493,
-        "planned_exit_ts": 1788179400,
-        "z_score": -4.997187372065335,
-        "horizon_min": 180,
-        "target_pct": 0.0
-      },
+      "last_signal_ts": 1788185700,
+      "open_trade": null,
       "closed_trades": [
         {
           "entry_ts": 1782906300,
@@ -2744,6 +2737,16 @@
           "pnl_usd": 6.681062816156766,
           "hold_minutes": 300,
           "z_score": -4.229441049027886
+        },
+        {
+          "entry_ts": 1788168600,
+          "entry_price": 0.000818355832170493,
+          "exit_ts": 1788185700,
+          "exit_price": 0.000892023855417729,
+          "return_pct": 9.001954938336445,
+          "pnl_usd": 4.500977469168222,
+          "hold_minutes": 285,
+          "z_score": -4.997187372065335
         }
       ]
     },
