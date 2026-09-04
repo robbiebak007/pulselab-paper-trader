@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "saved_at": "2026-09-04T12:31:28.687704+00:00",
+  "saved_at": "2026-09-04T12:36:32.668939+00:00",
   "variants": {
     "stETH_15m_z3.5_180m_w200": {
       "last_signal_ts": 1788523200,
@@ -765,8 +765,15 @@
       ]
     },
     "WETH_5m_z3.0_90m_w100": {
-      "last_signal_ts": 1788524700,
-      "open_trade": null,
+      "last_signal_ts": 1788525000,
+      "open_trade": {
+        "entry_ts": 1788525000,
+        "entry_price": 2450.84182097797,
+        "planned_exit_ts": 1788530400,
+        "z_score": -6.798489740484698,
+        "horizon_min": 90,
+        "target_pct": 2.0
+      },
       "closed_trades": [
         {
           "entry_ts": 1780261800,
