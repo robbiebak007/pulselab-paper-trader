@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "saved_at": "2026-09-04T16:10:44.374027+00:00",
+  "saved_at": "2026-09-04T16:16:37.296514+00:00",
   "variants": {
     "stETH_15m_z3.5_180m_w200": {
       "last_signal_ts": 1788536700,
@@ -1691,7 +1691,7 @@
       ]
     },
     "PLSX_15m_z3.5_120m_w100": {
-      "last_signal_ts": 1788536700,
+      "last_signal_ts": 1788537600,
       "open_trade": null,
       "closed_trades": [
         {
