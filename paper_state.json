@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "saved_at": "2026-09-04T18:36:32.528962+00:00",
+  "saved_at": "2026-09-04T18:41:32.115536+00:00",
   "variants": {
     "stETH_15m_z3.5_180m_w200": {
       "last_signal_ts": 1788545700,
@@ -775,7 +775,7 @@
       ]
     },
     "WETH_5m_z3.0_90m_w100": {
-      "last_signal_ts": 1788546300,
+      "last_signal_ts": 1788546900,
       "open_trade": null,
       "closed_trades": [
         {
