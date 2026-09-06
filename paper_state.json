@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "saved_at": "2026-09-06T23:11:30.286081+00:00",
+  "saved_at": "2026-09-06T23:15:45.594356+00:00",
   "variants": {
     "stETH_15m_z3.5_180m_w200": {
       "last_signal_ts": 1788734700,
@@ -409,7 +409,7 @@
       ]
     },
     "INC_15m_z3.5_180m_w100": {
-      "last_signal_ts": 1788734700,
+      "last_signal_ts": 1788735600,
       "open_trade": null,
       "closed_trades": [
         {
@@ -2137,7 +2137,7 @@
       ]
     },
     "ATROPA_15m_z3.5_180m_w100": {
-      "last_signal_ts": 1788732900,
+      "last_signal_ts": 1788735600,
       "open_trade": null,
       "closed_trades": [
         {
