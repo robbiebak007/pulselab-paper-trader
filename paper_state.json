@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "saved_at": "2026-09-07T12:56:19.935762+00:00",
+  "saved_at": "2026-09-07T13:01:08.139136+00:00",
   "variants": {
     "stETH_15m_z3.5_180m_w200": {
       "last_signal_ts": 1788783300,
@@ -409,7 +409,7 @@
       ]
     },
     "INC_15m_z3.5_180m_w100": {
-      "last_signal_ts": 1788784200,
+      "last_signal_ts": 1788785100,
       "open_trade": null,
       "closed_trades": [
         {
@@ -795,7 +795,7 @@
       ]
     },
     "WETH_5m_z3.0_90m_w100": {
-      "last_signal_ts": 1788785400,
+      "last_signal_ts": 1788785700,
       "open_trade": null,
       "closed_trades": [
         {
@@ -1754,7 +1754,7 @@
       ]
     },
     "PLSX_15m_z3.5_120m_w100": {
-      "last_signal_ts": 1788784200,
+      "last_signal_ts": 1788785100,
       "open_trade": null,
       "closed_trades": [
         {
@@ -2150,15 +2150,8 @@
       ]
     },
     "ATROPA_15m_z3.5_180m_w100": {
-      "last_signal_ts": 1788767100,
-      "open_trade": {
-        "entry_ts": 1788767100,
-        "entry_price": 0.0449175172868829,
-        "planned_exit_ts": 1788785100,
-        "z_score": -6.661892583640359,
-        "horizon_min": 300,
-        "target_pct": 0.0
-      },
+      "last_signal_ts": 1788785100,
+      "open_trade": null,
       "closed_trades": [
         {
           "entry_ts": 1780362000,
@@ -2579,6 +2572,16 @@
           "pnl_usd": 1.0987455766553231,
           "hold_minutes": 300,
           "z_score": -3.8428671985527005
+        },
+        {
+          "entry_ts": 1788767100,
+          "entry_price": 0.0449175172868829,
+          "exit_ts": 1788785100,
+          "exit_price": 0.0445298693477003,
+          "return_pct": -0.8630217398409239,
+          "pnl_usd": -0.43151086992046195,
+          "hold_minutes": 300,
+          "z_score": -6.661892583640359
         }
       ]
     },
