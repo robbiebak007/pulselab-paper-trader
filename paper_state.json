@@ -1,9 +1,9 @@
 {
   "version": 1,
-  "saved_at": "2026-09-15T23:40:38.041279+00:00",
+  "saved_at": "2026-09-16T01:38:37.005682+00:00",
   "variants": {
     "stETH_15m_z3.5_180m_w200": {
-      "last_signal_ts": 1789514100,
+      "last_signal_ts": 1789521300,
       "open_trade": null,
       "closed_trades": [
         {
@@ -439,7 +439,7 @@
       ]
     },
     "INC_15m_z3.5_180m_w100": {
-      "last_signal_ts": 1789514100,
+      "last_signal_ts": 1789521300,
       "open_trade": null,
       "closed_trades": [
         {
@@ -855,7 +855,7 @@
       ]
     },
     "WETH_5m_z3.0_90m_w100": {
-      "last_signal_ts": 1789515000,
+      "last_signal_ts": 1789522200,
       "open_trade": null,
       "closed_trades": [
         {
@@ -1441,7 +1441,7 @@
       ]
     },
     "HEX_15m_z3.5_120m_w100": {
-      "last_signal_ts": 1789514100,
+      "last_signal_ts": 1789521300,
       "open_trade": null,
       "closed_trades": [
         {
@@ -1897,15 +1897,8 @@
       ]
     },
     "PLSX_15m_z3.5_120m_w100": {
-      "last_signal_ts": 1789497000,
-      "open_trade": {
-        "entry_ts": 1789497000,
-        "entry_price": 1.00587981610562e-05,
-        "planned_exit_ts": 1789515000,
-        "z_score": -3.6824873207517546,
-        "horizon_min": 300,
-        "target_pct": 0.0
-      },
+      "last_signal_ts": 1789521300,
+      "open_trade": null,
       "closed_trades": [
         {
           "entry_ts": 1780685100,
@@ -2296,11 +2289,21 @@
           "pnl_usd": -0.24757825172596065,
           "hold_minutes": 300,
           "z_score": -4.172324039854405
+        },
+        {
+          "entry_ts": 1789497000,
+          "entry_price": 1.00587981610562e-05,
+          "exit_ts": 1789515000,
+          "exit_price": 9.68649875067808e-06,
+          "return_pct": -3.701231542944373,
+          "pnl_usd": -1.8506157714721865,
+          "hold_minutes": 300,
+          "z_score": -3.6824873207517546
         }
       ]
     },
     "ATROPA_15m_z3.5_180m_w100": {
-      "last_signal_ts": 1789514100,
+      "last_signal_ts": 1789521300,
       "open_trade": null,
       "closed_trades": [
         {
@@ -2792,7 +2795,7 @@
       ]
     },
     "SCADA_15m_z3.5_180m_w100_test": {
-      "last_signal_ts": 1789510500,
+      "last_signal_ts": 1789519500,
       "open_trade": null,
       "closed_trades": [
         {
