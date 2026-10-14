@@ -1,10 +1,17 @@
 {
   "version": 1,
-  "saved_at": "2026-10-14T10:27:29.947728+00:00",
+  "saved_at": "2026-10-14T15:19:23.008391+00:00",
   "variants": {
     "stETH_15m_z3.5_180m_w200": {
-      "last_signal_ts": 1791972000,
-      "open_trade": null,
+      "last_signal_ts": 1791977400,
+      "open_trade": {
+        "entry_ts": 1791977400,
+        "entry_price": 0.00182620120344056,
+        "planned_exit_ts": 1791995400,
+        "z_score": -6.832080014991519,
+        "horizon_min": 300,
+        "target_pct": 0.0
+      },
       "closed_trades": [
         {
           "entry_ts": 1780618500,
@@ -509,12 +516,12 @@
       ]
     },
     "INC_15m_z3.5_180m_w100": {
-      "last_signal_ts": 1791963000,
+      "last_signal_ts": 1791973800,
       "open_trade": {
-        "entry_ts": 1791963000,
-        "entry_price": 0.37347606045591,
-        "planned_exit_ts": 1791981000,
-        "z_score": -3.8539481857859466,
+        "entry_ts": 1791973800,
+        "entry_price": 0.363833240073037,
+        "planned_exit_ts": 1791991800,
+        "z_score": -4.511571854551486,
         "horizon_min": 300,
         "target_pct": 0.0
       },
@@ -1068,12 +1075,29 @@
           "pnl_usd": -0.11063327616012254,
           "hold_minutes": 315,
           "z_score": -5.463758800890294
+        },
+        {
+          "entry_ts": 1791963000,
+          "entry_price": 0.37347606045591,
+          "exit_ts": 1791981000,
+          "exit_price": 0.314760808051853,
+          "return_pct": -15.721289426792717,
+          "pnl_usd": -7.860644713396358,
+          "hold_minutes": 300,
+          "z_score": -3.8539481857859466
         }
       ]
     },
     "WETH_5m_z3.0_90m_w100": {
-      "last_signal_ts": 1791973200,
-      "open_trade": null,
+      "last_signal_ts": 1791977700,
+      "open_trade": {
+        "entry_ts": 1791977700,
+        "entry_price": 2458.69496212096,
+        "planned_exit_ts": 1791983100,
+        "z_score": -4.6853734552890645,
+        "horizon_min": 90,
+        "target_pct": 2.0
+      },
       "closed_trades": [
         {
           "entry_ts": 1780261800,
@@ -1788,8 +1812,15 @@
       ]
     },
     "HEX_15m_z3.5_120m_w100": {
-      "last_signal_ts": 1791972000,
-      "open_trade": null,
+      "last_signal_ts": 1791974700,
+      "open_trade": {
+        "entry_ts": 1791974700,
+        "entry_price": 0.00208960278400619,
+        "planned_exit_ts": 1791992700,
+        "z_score": -6.2384649317677665,
+        "horizon_min": 300,
+        "target_pct": 0.0
+      },
       "closed_trades": [
         {
           "entry_ts": 1780752600,
@@ -2334,8 +2365,15 @@
       ]
     },
     "PLSX_15m_z3.5_120m_w100": {
-      "last_signal_ts": 1791972000,
-      "open_trade": null,
+      "last_signal_ts": 1791973800,
+      "open_trade": {
+        "entry_ts": 1791973800,
+        "entry_price": 6.67778779603063e-06,
+        "planned_exit_ts": 1791991800,
+        "z_score": -5.432045340729704,
+        "horizon_min": 300,
+        "target_pct": 0.0
+      },
       "closed_trades": [
         {
           "entry_ts": 1780685100,
@@ -2850,8 +2888,15 @@
       ]
     },
     "ATROPA_15m_z3.5_180m_w100": {
-      "last_signal_ts": 1791972000,
-      "open_trade": null,
+      "last_signal_ts": 1791975600,
+      "open_trade": {
+        "entry_ts": 1791975600,
+        "entry_price": 0.0284741774397692,
+        "planned_exit_ts": 1791993600,
+        "z_score": -7.9551619081683205,
+        "horizon_min": 300,
+        "target_pct": 0.0
+      },
       "closed_trades": [
         {
           "entry_ts": 1780362000,
@@ -3422,8 +3467,15 @@
       ]
     },
     "SCADA_15m_z3.5_180m_w100_test": {
-      "last_signal_ts": 1791972000,
-      "open_trade": null,
+      "last_signal_ts": 1791975600,
+      "open_trade": {
+        "entry_ts": 1791975600,
+        "entry_price": 0.000527741014910849,
+        "planned_exit_ts": 1791986400,
+        "z_score": -4.70933644943165,
+        "horizon_min": 180,
+        "target_pct": 0.0
+      },
       "closed_trades": [
         {
           "entry_ts": 1782906300,
