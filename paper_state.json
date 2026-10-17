@@ -1,17 +1,10 @@
 {
   "version": 1,
-  "saved_at": "2026-10-17T11:33:35.074837+00:00",
+  "saved_at": "2026-10-17T14:22:34.820283+00:00",
   "variants": {
     "stETH_15m_z3.5_180m_w200": {
-      "last_signal_ts": 1792221300,
-      "open_trade": {
-        "entry_ts": 1792221300,
-        "entry_price": 0.00178591322018478,
-        "planned_exit_ts": 1792239300,
-        "z_score": -7.731295306617357,
-        "horizon_min": 300,
-        "target_pct": 0.0
-      },
+      "last_signal_ts": 1792245600,
+      "open_trade": null,
       "closed_trades": [
         {
           "entry_ts": 1780618500,
@@ -542,19 +535,22 @@
           "pnl_usd": 12.761442287028693,
           "hold_minutes": 300,
           "z_score": -3.531196366235662
+        },
+        {
+          "entry_ts": 1792221300,
+          "entry_price": 0.00178591322018478,
+          "exit_ts": 1792239300,
+          "exit_price": 0.00182258350796803,
+          "return_pct": 2.053307370637862,
+          "pnl_usd": 1.026653685318931,
+          "hold_minutes": 300,
+          "z_score": -7.731295306617357
         }
       ]
     },
     "INC_15m_z3.5_180m_w100": {
-      "last_signal_ts": 1792221300,
-      "open_trade": {
-        "entry_ts": 1792221300,
-        "entry_price": 0.262187574302406,
-        "planned_exit_ts": 1792239300,
-        "z_score": -7.87665618789866,
-        "horizon_min": 300,
-        "target_pct": 0.0
-      },
+      "last_signal_ts": 1792245600,
+      "open_trade": null,
       "closed_trades": [
         {
           "entry_ts": 1780668900,
@@ -1175,11 +1171,21 @@
           "pnl_usd": 15.167886941326719,
           "hold_minutes": 300,
           "z_score": -3.561495699157801
+        },
+        {
+          "entry_ts": 1792221300,
+          "entry_price": 0.262187574302406,
+          "exit_ts": 1792239300,
+          "exit_price": 0.255047915242386,
+          "return_pct": -2.7231111462914552,
+          "pnl_usd": -1.3615555731457278,
+          "hold_minutes": 300,
+          "z_score": -7.87665618789866
         }
       ]
     },
     "WETH_5m_z3.0_90m_w100": {
-      "last_signal_ts": 1792236300,
+      "last_signal_ts": 1792246500,
       "open_trade": null,
       "closed_trades": [
         {
@@ -1955,15 +1961,8 @@
       ]
     },
     "HEX_15m_z3.5_120m_w100": {
-      "last_signal_ts": 1792221300,
-      "open_trade": {
-        "entry_ts": 1792221300,
-        "entry_price": 0.00116430017032993,
-        "planned_exit_ts": 1792239300,
-        "z_score": -8.860683202349543,
-        "horizon_min": 300,
-        "target_pct": 0.0
-      },
+      "last_signal_ts": 1792245600,
+      "open_trade": null,
       "closed_trades": [
         {
           "entry_ts": 1780752600,
@@ -2584,16 +2583,26 @@
           "pnl_usd": 51.00183298226516,
           "hold_minutes": 300,
           "z_score": -3.7581227266145647
+        },
+        {
+          "entry_ts": 1792221300,
+          "entry_price": 0.00116430017032993,
+          "exit_ts": 1792239300,
+          "exit_price": 0.00110619263181356,
+          "return_pct": -4.990769562449163,
+          "pnl_usd": -2.4953847812245815,
+          "hold_minutes": 300,
+          "z_score": -8.860683202349543
         }
       ]
     },
     "PLSX_15m_z3.5_120m_w100": {
-      "last_signal_ts": 1792221300,
+      "last_signal_ts": 1792227600,
       "open_trade": {
-        "entry_ts": 1792221300,
-        "entry_price": 4.18889665379306e-06,
-        "planned_exit_ts": 1792239300,
-        "z_score": -8.287725292207597,
+        "entry_ts": 1792227600,
+        "entry_price": 3.72817967709074e-06,
+        "planned_exit_ts": 1792245600,
+        "z_score": -4.046385070355373,
         "horizon_min": 300,
         "target_pct": 0.0
       },
@@ -3197,16 +3206,26 @@
           "pnl_usd": -0.02212548452497514,
           "hold_minutes": 300,
           "z_score": -3.6555991336176037
+        },
+        {
+          "entry_ts": 1792221300,
+          "entry_price": 4.18889665379306e-06,
+          "exit_ts": 1792239300,
+          "exit_price": 3.98207185743194e-06,
+          "return_pct": -4.937452829585569,
+          "pnl_usd": -2.4687264147927843,
+          "hold_minutes": 300,
+          "z_score": -8.287725292207597
         }
       ]
     },
     "ATROPA_15m_z3.5_180m_w100": {
-      "last_signal_ts": 1792220400,
+      "last_signal_ts": 1792221300,
       "open_trade": {
-        "entry_ts": 1792220400,
-        "entry_price": 0.025957094174479,
-        "planned_exit_ts": 1792238400,
-        "z_score": -3.7904737982462073,
+        "entry_ts": 1792221300,
+        "entry_price": 0.0239757236497802,
+        "planned_exit_ts": 1792239300,
+        "z_score": -6.156263222982608,
         "horizon_min": 300,
         "target_pct": 0.0
       },
@@ -3800,6 +3819,16 @@
           "pnl_usd": 0.4196115739511141,
           "hold_minutes": 300,
           "z_score": -4.146189481396814
+        },
+        {
+          "entry_ts": 1792220400,
+          "entry_price": 0.025957094174479,
+          "exit_ts": 1792238400,
+          "exit_price": 0.0217549092660333,
+          "return_pct": -16.188965067504697,
+          "pnl_usd": -8.094482533752348,
+          "hold_minutes": 300,
+          "z_score": -3.7904737982462073
         }
       ]
     },
@@ -3830,15 +3859,8 @@
       ]
     },
     "SCADA_15m_z3.5_180m_w100_test": {
-      "last_signal_ts": 1792221300,
-      "open_trade": {
-        "entry_ts": 1792221300,
-        "entry_price": 0.000357963237227553,
-        "planned_exit_ts": 1792232100,
-        "z_score": -3.548294116373162,
-        "horizon_min": 180,
-        "target_pct": 0.0
-      },
+      "last_signal_ts": 1792245600,
+      "open_trade": null,
       "closed_trades": [
         {
           "entry_ts": 1782906300,
@@ -4289,6 +4311,16 @@
           "pnl_usd": -1.4768498785857218,
           "hold_minutes": 180,
           "z_score": -7.128965729125773
+        },
+        {
+          "entry_ts": 1792221300,
+          "entry_price": 0.000357963237227553,
+          "exit_ts": 1792234800,
+          "exit_price": 0.000343056205266409,
+          "return_pct": -4.164403047810124,
+          "pnl_usd": -2.082201523905062,
+          "hold_minutes": 225,
+          "z_score": -3.548294116373162
         }
       ]
     },
