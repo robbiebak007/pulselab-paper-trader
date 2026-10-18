@@ -1,9 +1,9 @@
 {
   "version": 1,
-  "saved_at": "2026-10-18T16:56:33.020202+00:00",
+  "saved_at": "2026-10-18T19:05:38.136358+00:00",
   "variants": {
     "stETH_15m_z3.5_180m_w200": {
-      "last_signal_ts": 1792341000,
+      "last_signal_ts": 1792348200,
       "open_trade": null,
       "closed_trades": [
         {
@@ -549,7 +549,7 @@
       ]
     },
     "INC_15m_z3.5_180m_w100": {
-      "last_signal_ts": 1792341000,
+      "last_signal_ts": 1792349100,
       "open_trade": null,
       "closed_trades": [
         {
@@ -1185,15 +1185,8 @@
       ]
     },
     "WETH_5m_z3.0_90m_w100": {
-      "last_signal_ts": 1792330800,
-      "open_trade": {
-        "entry_ts": 1792330800,
-        "entry_price": 2359.05427822116,
-        "planned_exit_ts": 1792336200,
-        "z_score": -3.924786406335702,
-        "horizon_min": 90,
-        "target_pct": 2.0
-      },
+      "last_signal_ts": 1792349700,
+      "open_trade": null,
       "closed_trades": [
         {
           "entry_ts": 1780261800,
@@ -1984,11 +1977,21 @@
           "pnl_usd": 1.0,
           "hold_minutes": 40,
           "z_score": -3.105748186422962
+        },
+        {
+          "entry_ts": 1792330800,
+          "entry_price": 2359.05427822116,
+          "exit_ts": 1792333500,
+          "exit_price": 2406.235363785583,
+          "return_pct": 2.0,
+          "pnl_usd": 1.0,
+          "hold_minutes": 45,
+          "z_score": -3.924786406335702
         }
       ]
     },
     "HEX_15m_z3.5_120m_w100": {
-      "last_signal_ts": 1792341000,
+      "last_signal_ts": 1792349100,
       "open_trade": null,
       "closed_trades": [
         {
@@ -2624,7 +2627,7 @@
       ]
     },
     "PLSX_15m_z3.5_120m_w100": {
-      "last_signal_ts": 1792341000,
+      "last_signal_ts": 1792349100,
       "open_trade": null,
       "closed_trades": [
         {
@@ -3250,7 +3253,7 @@
       ]
     },
     "ATROPA_15m_z3.5_180m_w100": {
-      "last_signal_ts": 1792340100,
+      "last_signal_ts": 1792349100,
       "open_trade": null,
       "closed_trades": [
         {
