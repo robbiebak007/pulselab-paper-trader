@@ -1,9 +1,9 @@
 {
   "version": 1,
-  "saved_at": "2026-10-26T01:08:32.424461+00:00",
+  "saved_at": "2026-10-26T06:05:34.260419+00:00",
   "variants": {
     "stETH_15m_z3.5_180m_w200": {
-      "last_signal_ts": 1792975500,
+      "last_signal_ts": 1792993500,
       "open_trade": null,
       "closed_trades": [
         {
@@ -549,7 +549,7 @@
       ]
     },
     "INC_15m_z3.5_180m_w100": {
-      "last_signal_ts": 1792975500,
+      "last_signal_ts": 1792993500,
       "open_trade": null,
       "closed_trades": [
         {
@@ -1235,8 +1235,15 @@
       ]
     },
     "WETH_5m_z3.0_90m_w100": {
-      "last_signal_ts": 1792976400,
-      "open_trade": null,
+      "last_signal_ts": 1792979100,
+      "open_trade": {
+        "entry_ts": 1792979100,
+        "entry_price": 2287.0128065366,
+        "planned_exit_ts": 1792984500,
+        "z_score": -3.374759891006497,
+        "horizon_min": 90,
+        "target_pct": 2.0
+      },
       "closed_trades": [
         {
           "entry_ts": 1780261800,
@@ -2081,8 +2088,15 @@
       ]
     },
     "HEX_15m_z3.5_120m_w100": {
-      "last_signal_ts": 1792975500,
-      "open_trade": null,
+      "last_signal_ts": 1792979100,
+      "open_trade": {
+        "entry_ts": 1792979100,
+        "entry_price": 0.00115986577668934,
+        "planned_exit_ts": 1792997100,
+        "z_score": -4.026097163751213,
+        "horizon_min": 300,
+        "target_pct": 0.0
+      },
       "closed_trades": [
         {
           "entry_ts": 1780752600,
@@ -2737,7 +2751,7 @@
       ]
     },
     "PLSX_15m_z3.5_120m_w100": {
-      "last_signal_ts": 1792975500,
+      "last_signal_ts": 1792993500,
       "open_trade": null,
       "closed_trades": [
         {
@@ -3403,7 +3417,7 @@
       ]
     },
     "ATROPA_15m_z3.5_180m_w100": {
-      "last_signal_ts": 1792975500,
+      "last_signal_ts": 1792993500,
       "open_trade": null,
       "closed_trades": [
         {
@@ -4055,7 +4069,7 @@
       ]
     },
     "SCADA_15m_z3.5_180m_w100_test": {
-      "last_signal_ts": 1792972800,
+      "last_signal_ts": 1792992600,
       "open_trade": null,
       "closed_trades": [
         {
