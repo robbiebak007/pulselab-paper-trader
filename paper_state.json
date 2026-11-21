@@ -1,17 +1,10 @@
 {
   "version": 1,
-  "saved_at": "2026-11-21T19:39:36.874392+00:00",
+  "saved_at": "2026-11-21T23:55:27.746146+00:00",
   "variants": {
     "stETH_15m_z3.5_180m_w200": {
-      "last_signal_ts": 1795282200,
-      "open_trade": {
-        "entry_ts": 1795282200,
-        "entry_price": 0.0015947383118774699,
-        "planned_exit_ts": 1795300200,
-        "z_score": -4.590252913541658,
-        "horizon_min": 300,
-        "target_pct": 0.0
-      },
+      "last_signal_ts": 1795303800,
+      "open_trade": null,
       "closed_trades": [
         {
           "entry_ts": 1780618500,
@@ -652,19 +645,22 @@
           "pnl_usd": 2.387812955550795,
           "hold_minutes": 300,
           "z_score": -7.3698603445886715
+        },
+        {
+          "entry_ts": 1795282200,
+          "entry_price": 0.0015947383118774699,
+          "exit_ts": 1795300200,
+          "exit_price": 0.00157404766078518,
+          "return_pct": -1.2974323710785542,
+          "pnl_usd": -0.6487161855392771,
+          "hold_minutes": 300,
+          "z_score": -4.590252913541658
         }
       ]
     },
     "INC_15m_z3.5_180m_w100": {
-      "last_signal_ts": 1795233600,
-      "open_trade": {
-        "entry_ts": 1795233600,
-        "entry_price": 0.18642724297622,
-        "planned_exit_ts": 1795251600,
-        "z_score": -3.9924780110105424,
-        "horizon_min": 300,
-        "target_pct": 0.0
-      },
+      "last_signal_ts": 1795303800,
+      "open_trade": null,
       "closed_trades": [
         {
           "entry_ts": 1780668900,
@@ -1465,11 +1461,21 @@
           "pnl_usd": -0.1531380617836471,
           "hold_minutes": 300,
           "z_score": -4.264405802115382
+        },
+        {
+          "entry_ts": 1795233600,
+          "entry_price": 0.18642724297622,
+          "exit_ts": 1795251600,
+          "exit_price": 0.194017615592129,
+          "return_pct": 4.071493251057306,
+          "pnl_usd": 2.035746625528653,
+          "hold_minutes": 300,
+          "z_score": -3.9924780110105424
         }
       ]
     },
     "WETH_5m_z3.0_90m_w100": {
-      "last_signal_ts": 1795289400,
+      "last_signal_ts": 1795304700,
       "open_trade": null,
       "closed_trades": [
         {
@@ -2485,7 +2491,7 @@
       ]
     },
     "HEX_15m_z3.5_120m_w100": {
-      "last_signal_ts": 1795288500,
+      "last_signal_ts": 1795303800,
       "open_trade": null,
       "closed_trades": [
         {
@@ -3211,7 +3217,7 @@
       ]
     },
     "PLSX_15m_z3.5_120m_w100": {
-      "last_signal_ts": 1795288500,
+      "last_signal_ts": 1795303800,
       "open_trade": null,
       "closed_trades": [
         {
@@ -3987,7 +3993,7 @@
       ]
     },
     "ATROPA_15m_z3.5_180m_w100": {
-      "last_signal_ts": 1795288500,
+      "last_signal_ts": 1795302900,
       "open_trade": null,
       "closed_trades": [
         {
@@ -4769,7 +4775,7 @@
       ]
     },
     "SCADA_15m_z3.5_180m_w100_test": {
-      "last_signal_ts": 1795279500,
+      "last_signal_ts": 1795301100,
       "open_trade": null,
       "closed_trades": [
         {
